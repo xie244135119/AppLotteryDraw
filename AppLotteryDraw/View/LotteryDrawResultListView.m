@@ -80,7 +80,10 @@
     
 }
 
-
+-(void)setSourcesModel:(LotteryModel *)sourcesModel{
+    _sourcesModel = sourcesModel;
+    [_currentTableView reloadData];
+}
 
 
 @end

@@ -20,16 +20,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view .backgroundColor = [UIColor whiteColor];
+    [self initContentView];
      [self requestApi];
 }
 
-- (void)initContentViewWithSourceModel:(LotteryModel *)model{
-    self.view.backgroundColor = [UIColor whiteColor];
+- (void)initContentView{
     LotteryDrawResultListView *view = [[LotteryDrawResultListView alloc]init];
     _view = view;
-    view.sourcesModel = model;
     [self.view addSubview:view];
 }
+
+//- (void)initContentViewWithSourceModel:(LotteryModel *)model{
+//    self.view.backgroundColor = [UIColor whiteColor];
+//    LotteryDrawResultListView *view = [[LotteryDrawResultListView alloc]init];
+//    _view = view;
+//    view.sourcesModel = model;
+//    [self.view addSubview:view];
+//}
 
 - (void)requestApi{
     __weak typeof(self) weakself = self;
@@ -43,9 +51,11 @@
                                                             options:NSJSONReadingMutableContainers
                                                               error:nil];
         LotteryModel *model = [[LotteryModel alloc]initWithDictionary:dic];
+        
         //回到主线程执行
         dispatch_async(dispatch_get_main_queue(), ^{
-            [weakself initContentViewWithSourceModel:model];
+//            [weakself initContentViewWithSourceModel:model];
+            _view.sourcesModel = model;
         });
     }];
     [task resume];
