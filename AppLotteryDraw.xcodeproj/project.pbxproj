@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
 		728A71F72047A083005666C0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 728A71DB2047A083005666C0 /* LICENSE */; };
 		728A71F82047A083005666C0 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 728A71DE2047A083005666C0 /* MASCompositeConstraint.m */; };
 		728A71F92047A083005666C0 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 728A71E12047A083005666C0 /* MASConstraint.m */; };
@@ -25,8 +24,6 @@
 		728A72142047A38E005666C0 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 728A72122047A38E005666C0 /* Data.m */; };
 		728A72172047A47D005666C0 /* LotteryDrawResultListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 728A72162047A47D005666C0 /* LotteryDrawResultListView.m */; };
 		728A721A2047A4C9005666C0 /* LotteryDrawResultListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 728A72192047A4C9005666C0 /* LotteryDrawResultListCell.m */; };
-=======
->>>>>>> 5d69a5d480e26daaf1db82ab202e5d86dec45f79
 		CB57DC182046BE2C00F2CFB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */; };
 		CB57DC1B2046BE2C00F2CFB3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC1A2046BE2C00F2CFB3 /* ViewController.m */; };
 		CB57DC1E2046BE2C00F2CFB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB57DC1C2046BE2C00F2CFB3 /* Main.storyboard */; };
@@ -36,7 +33,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
 		728A71DB2047A083005666C0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		728A71DD2047A083005666C0 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		728A71DE2047A083005666C0 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
@@ -76,8 +72,6 @@
 		728A72192047A4C9005666C0 /* LotteryDrawResultListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LotteryDrawResultListCell.m; sourceTree = "<group>"; };
 		728A721C2047AAC7005666C0 /* LotteryDrawGlobalVar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LotteryDrawGlobalVar.h; sourceTree = "<group>"; };
 		728A721D2047AB29005666C0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-=======
->>>>>>> 5d69a5d480e26daaf1db82ab202e5d86dec45f79
 		CB57DC132046BE2C00F2CFB3 /* AppLotteryDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppLotteryDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB57DC162046BE2C00F2CFB3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,7 +95,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-<<<<<<< HEAD
 		728A71DA2047A083005666C0 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,8 +171,6 @@
 			path = AppLotteryDraw/View;
 			sourceTree = SOURCE_ROOT;
 		};
-=======
->>>>>>> 5d69a5d480e26daaf1db82ab202e5d86dec45f79
 		CB57DC0A2046BE2C00F2CFB3 = {
 			isa = PBXGroup;
 			children = (
@@ -199,22 +190,16 @@
 		CB57DC152046BE2C00F2CFB3 /* AppLotteryDraw */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				728A72032047A235005666C0 /* Controller */,
 				728A72062047A235005666C0 /* Model */,
 				728A72072047A235005666C0 /* View */,
 				728A71DA2047A083005666C0 /* Masonry */,
-=======
->>>>>>> 5d69a5d480e26daaf1db82ab202e5d86dec45f79
 				CB57DC162046BE2C00F2CFB3 /* AppDelegate.h */,
 				CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */,
 				CB57DC192046BE2C00F2CFB3 /* ViewController.h */,
 				CB57DC1A2046BE2C00F2CFB3 /* ViewController.m */,
-<<<<<<< HEAD
 				728A721C2047AAC7005666C0 /* LotteryDrawGlobalVar.h */,
 				728A721D2047AB29005666C0 /* PrefixHeader.pch */,
-=======
->>>>>>> 5d69a5d480e26daaf1db82ab202e5d86dec45f79
 				CB57DC1C2046BE2C00F2CFB3 /* Main.storyboard */,
 				CB57DC1F2046BE2C00F2CFB3 /* Assets.xcassets */,
 				CB57DC212046BE2C00F2CFB3 /* LaunchScreen.storyboard */,
@@ -282,11 +267,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				728A71F72047A083005666C0 /* LICENSE in Resources */,
 				728A72022047A084005666C0 /* README.md in Resources */,
-=======
->>>>>>> 5d69a5d480e26daaf1db82ab202e5d86dec45f79
 				CB57DC232046BE2C00F2CFB3 /* LaunchScreen.storyboard in Resources */,
 				CB57DC202046BE2C00F2CFB3 /* Assets.xcassets in Resources */,
 				CB57DC1E2046BE2C00F2CFB3 /* Main.storyboard in Resources */,
@@ -300,7 +282,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				728A71FF2047A084005666C0 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				728A71FE2047A084005666C0 /* NSArray+MASAdditions.m in Sources */,
 				728A72082047A235005666C0 /* LotteryDrawResultListController.m in Sources */,
@@ -319,11 +300,6 @@
 				728A71FB2047A083005666C0 /* MASLayoutConstraint.m in Sources */,
 				728A72132047A38E005666C0 /* LotteryModel.m in Sources */,
 				728A72012047A084005666C0 /* ViewController+MASAdditions.m in Sources */,
-=======
-				CB57DC1B2046BE2C00F2CFB3 /* ViewController.m in Sources */,
-				CB57DC262046BE2C00F2CFB3 /* main.m in Sources */,
-				CB57DC182046BE2C00F2CFB3 /* AppDelegate.m in Sources */,
->>>>>>> 5d69a5d480e26daaf1db82ab202e5d86dec45f79
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,10 +434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-<<<<<<< HEAD
 				GCC_PREFIX_HEADER = AppLotteryDraw/PrefixHeader.pch;
-=======
->>>>>>> 5d69a5d480e26daaf1db82ab202e5d86dec45f79
 				INFOPLIST_FILE = AppLotteryDraw/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.AppLotteryDraw;
@@ -475,10 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-<<<<<<< HEAD
 				GCC_PREFIX_HEADER = AppLotteryDraw/PrefixHeader.pch;
-=======
->>>>>>> 5d69a5d480e26daaf1db82ab202e5d86dec45f79
 				INFOPLIST_FILE = AppLotteryDraw/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.AppLotteryDraw;
