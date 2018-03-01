@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  AppLotteryDraw
+//
+//  Created by 马清霞 on 2018/3/1.
+//  Copyright © 2018年 SunSet. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "LotteryDrawGlobalVar.h"
+
+#endif /* PrefixHeader_pch */
