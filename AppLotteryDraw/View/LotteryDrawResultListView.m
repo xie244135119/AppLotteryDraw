@@ -8,7 +8,7 @@
 
 #import "LotteryDrawResultListView.h"
 #import "LotteryDrawResultListCell.h"
-
+#import "Data.h"
 
 
 @interface LotteryDrawResultListView()<UITableViewDelegate,UITableViewDataSource>
@@ -23,7 +23,8 @@
 -(instancetype)init
 {
     if (self = [super init]) {
-        _sourceArray= @[@"34",@"64",@"26",@"43",@"24",@"66",@"3",@"4",@"6",@"00",@"64",@"26",@"36",@"34",@"26",@"43",@"44",@"46",@"00",@"24",@"16",@"13",@"14",@"16",@"33",@"34",@"06",@"36",@"03",@"04",@"06",@"00"];
+        self.backgroundColor = [UIColor whiteColor];
+        _sourceArray= _sourcesModel.data;
         self.frame = [UIScreen mainScreen].bounds;
         [self initTableView];
     }
@@ -31,7 +32,7 @@
 }
 
 - (void)initTableView{
-    UITableView *currentTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, APPWidth, APPHeight) style:UITableViewStyleGrouped];
+    UITableView *currentTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, APPWidth, APPHeight) style:UITableViewStylePlain];
     currentTable.delegate = self;
     currentTable.dataSource = self;
     _currentTableView = currentTable;
@@ -42,16 +43,13 @@
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [LotteryDrawResultListCell cellHeight:_sourceArray.count];
+    Data *dataModel = _sourcesModel.data[indexPath.row];
+    return [LotteryDrawResultListCell cellHeight:dataModel.redArry.count+dataModel.blueArry.count];
 }
 
 #pragma mark - UITableViewDataSource
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    return _sourcesModel.data.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -60,10 +58,29 @@
     if (cell == nil) {
         cell = [[LotteryDrawResultListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    cell.itemSourceArray = _sourceArray;
+     Data *dataModel = _sourcesModel.data[indexPath.row];
+//    cell.itemSourceArray = [dataModel openCode];
+    [cell setItemCodel:dataModel.redArry blueCode:dataModel.blueArry];
+    cell.dateLabel.text = dataModel.expect;
+    cell.timeLabel.text = [self timestampSwitchTime:dataModel.opentimestamp ];
 //    cell.infoSourceArray = @[@"dfafds"];
     return cell;
 }
+
+-(NSString *)timestampSwitchTime:(NSInteger)timestamp{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:@"YYYY-MM-dd hh:mm:ss"];
+    NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
+    [formatter setTimeZone:timeZone];
+    NSDate *confromTimesp = [NSDate dateWithTimeIntervalSince1970:timestamp];
+    NSString *confromTimespStr = [formatter stringFromDate:confromTimesp];
+    return confromTimespStr;
+    
+}
+
+
 
 
 @end

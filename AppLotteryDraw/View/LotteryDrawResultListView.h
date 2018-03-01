@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LotteryModel.h"
 
 @interface LotteryDrawResultListView : UIView
 
+@property (nonatomic, strong)LotteryModel *sourcesModel;
 
 
 @end

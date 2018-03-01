@@ -113,4 +113,32 @@ NSString *const kDataOpentimestamp = @"opentimestamp";
 
 	return copy;
 }
+
+-(void)setOpencode:(NSString *)opencode{
+    if (opencode.length>0) {
+        _opencode = opencode;
+        [self resolveOpenCode];
+    }
+}
+
+//分解opencode
+-(void)resolveOpenCode{
+    NSArray  *array = [_opencode componentsSeparatedByString:@"+"];
+    if (array != 0) {
+        //蓝色号
+        _blueArry = [array[1] componentsSeparatedByString:@","];
+        //红色号
+        _redArry = [array[0] componentsSeparatedByString:@","];
+    }else{
+        //只有红色号
+        NSArray  *redArray = [_opencode componentsSeparatedByString:@","];
+        _redArry = redArray;
+    }
+}
+
+
 @end
+
+
+
+

@@ -10,10 +10,18 @@
 
 @interface LotteryDrawResultListCell : UITableViewCell
 
-//数据源
-@property (nonatomic, strong)NSArray<NSString*> *itemSourceArray;
+//开奖时间
+@property (nonatomic, strong)UILabel *timeLabel;
+//期数
+@property (nonatomic, strong)UILabel *dateLabel;
 
-//@property (nonatomic, strong)NSArray<NSString*> *infoSourceArray;
+////数据源红号
+//@property (nonatomic, strong)NSArray<NSString*> *itemRedSourceArray;
+////蓝色号
+//@property (nonatomic, strong)NSArray<NSString*> *infoBlueSourceArray;
+
+//设置opencode
+- (void)setItemCodel:(NSArray *)redCode blueCode:(NSArray *)blueCode;
 
 + (CGFloat)cellHeight:(NSInteger)sourceCount;
 

@@ -9,8 +9,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Data.h"
-
-@interface LotteryModel : NSObject
+#import "SSJSONModel.h"
+@interface LotteryModel :AMDBaseModel
 
 @property (nonatomic, strong) NSString * code;
 @property (nonatomic, strong) NSArray<Data> *data;

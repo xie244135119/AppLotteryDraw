@@ -31,14 +31,15 @@
 
 - (void)initContentView
 {
-    _itemSourceArray = [[NSArray alloc]init];
-//    _infoSourceArray = [[NSArray alloc]init];
+//    _itemRedSourceArray = [[NSArray alloc]init];
+//    _infoBlueSourceArray = [[NSArray alloc]init];
     //开奖时间
     UILabel *timeLabel = [[UILabel alloc]init];
-    timeLabel.text = @"20180222期";
+    _dateLabel = timeLabel;
+//    timeLabel.text = @"20180222期";
     timeLabel.font = [UIFont systemFontOfSize:14];
     timeLabel.textColor = ColorWithRGB(51, 51, 51, 1);
-    timeLabel.layer.borderWidth = 1;
+//    timeLabel.layer.borderWidth = 1;
     [self addSubview:timeLabel];
     [timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@10);
@@ -49,10 +50,11 @@
     
     //开奖时间
     UILabel *openTime = [[UILabel alloc]init];
+    _timeLabel = openTime;
     openTime.textAlignment = NSTextAlignmentRight;
     openTime.font = [UIFont systemFontOfSize:12];
     openTime.textColor = ColorWithRGB(119, 119, 119, 1);
-    openTime.text = @"2018-03-01 15:44";
+//    openTime.text = @"2018-03-01 15:44";
     [self addSubview:openTime];
     [openTime mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.offset(-10);
@@ -66,7 +68,7 @@
     _resultBackView = resultBackView;
     resultBackView.backgroundColor = ColorWithRGB(230, 230, 230, 1);
     resultBackView.layer.borderWidth = .5;
-    resultBackView.layer.borderColor = [UIColor redColor].CGColor;
+    resultBackView.layer.borderColor = [UIColor grayColor].CGColor;
     [self addSubview:resultBackView];
     [resultBackView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(timeLabel);
@@ -93,15 +95,15 @@
     label.attributedText = attributeStr;
 }
 
--(void)setItemSourceArray:(NSArray<NSString *> *)itemSourceArray{
-    _itemSourceArray = itemSourceArray;
-    if (itemSourceArray.count>0) {
-        [self initLotterDrawResultItem];
-    }
-}
+//-(void)setItemSourceArray:(NSArray<NSString *> *)itemSourceArray{
+//    _itemSourceArray = itemSourceArray;
+//    if (itemSourceArray.count>0) {
+//        [self initLotterDrawResultItem];
+//    }
+//}
 
 //搭建相应item按钮
-- (void)initLotterDrawResultItem{
+- (void)setItemCodel:(NSArray *)redCode blueCode:(NSArray *)blueCode{
     __block UIButton *_firstBt = nil;
     __block UIButton *_lastBt = nil;
     __block UIButton *_upBt = nil;
@@ -114,25 +116,24 @@
         [itemBack mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.top.right.offset(0);
         }];
-
-    for (int i = 0; i <_itemSourceArray.count; i++) {
-//        UIView *itemView = [[UIView alloc]init];
-//        itemView.layer.borderWidth = 1;
-//        [_currentItemBack addSubview:itemView];
+    NSMutableArray *sourceArray = [[NSMutableArray alloc]initWithArray:redCode];
+    if (blueCode>0) {
+        [sourceArray insertObjects:blueCode atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(redCode.count, blueCode.count)]];
+    }
+    for (int i = 0; i <sourceArray.count; i++) {
         UIButton *itemBt = [[UIButton alloc]init];
         itemBt.layer.borderWidth = 1;
-        itemBt.layer.borderColor = [UIColor blueColor].CGColor;
+        if (i<redCode.count) {
+            itemBt.layer.borderColor = [UIColor redColor].CGColor;
+            [itemBt setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        }else{
+            itemBt.layer.borderColor = [UIColor blueColor].CGColor;
+            [itemBt setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        }
         itemBt.layer.cornerRadius = 15;
         itemBt.titleLabel.font = [UIFont systemFontOfSize:15];
-        [itemBt setTitle:_itemSourceArray[i] forState:UIControlStateNormal];
-        [itemBt setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [itemBt setTitle:sourceArray[i] forState:UIControlStateNormal];
         [_currentItemBack addSubview:itemBt];
-        
-//        [itemBt mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.height.width.equalTo(@50);
-//            make.centerX.equalTo(itemView.mas_centerX);
-//            make.centerY.equalTo(itemView.mas_centerY);
-//        }];
         
         NSInteger row = i/10;
         NSInteger column = i%10;
