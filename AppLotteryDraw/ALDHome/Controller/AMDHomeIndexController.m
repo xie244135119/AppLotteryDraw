@@ -15,21 +15,28 @@
 #import "ALDCountryController.h"
 #import "LotteryDrawResultListController.h"
 #import "ALDLofferyListController.h"
+#import "ALDHomeIndexViewModel.h"
 
-@interface AMDHomeIndexController ()<CustomTableViewDelegate>
+@interface AMDHomeIndexController ()
 {
     NSDictionary *_lattoryDict;             //所有彩种数据源
+    ALDHomeIndexViewModel *_viewModel;      //
 }
 @property(nonatomic, strong) NSArray *sourceArry;       //数据
 @end
 
 @implementation AMDHomeIndexController
 
+- (void)dealloc
+{
+    _viewModel = nil;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     //
-    [self initTableView];
+//    [self initTableView];
     [self initNavView:self.titleView];
     [self loadDict];
 }
@@ -63,17 +70,28 @@
 }
 
 //
-- (void)initTableView
+//- (void)initTableView
+//{
+//    CustomTableView *tableView = [[CustomTableView alloc]initWithType:kCustomTableViewTypeGeneral];
+//    tableView.delegate = self;
+//    [self.contentView addSubview:tableView];
+//    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.insets(UIEdgeInsetsMake(0, 0, 0, 0));
+//    }];
+//    //
+//    self.sourceArry = @[@"全国彩开奖数据",@"高频彩开奖数据",@"低频彩列表"];
+//    tableView.sourceData = _sourceArry;
+//}
+
+//
+- (void)initViewModel
 {
-    CustomTableView *tableView = [[CustomTableView alloc]initWithType:kCustomTableViewTypeGeneral];
-    tableView.delegate = self;
-    [self.contentView addSubview:tableView];
-    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.insets(UIEdgeInsetsMake(0, 0, 0, 0));
-    }];
-    //
-    self.sourceArry = @[@"全国彩开奖数据",@"高频彩开奖数据",@"低频彩列表"];
-    tableView.sourceData = _sourceArry;
+    
+    ALDHomeIndexViewModel *vM = [[ALDHomeIndexViewModel alloc]init];
+    vM.superView = self.contentView;
+    vM.senderController = self.menuVC;
+    [vM prepareViewBySuper];
+    _viewModel = vM;
 }
 
 
@@ -81,53 +99,58 @@
 // 初始化字典
 - (void)loadDict
 {
+    __weak typeof(self) weakself = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         if (_lattoryDict == nil) {
             NSString *plistpath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"LotteryType.plist"];
             NSDictionary *dict = [[NSDictionary alloc]initWithContentsOfFile:plistpath];
             _lattoryDict = dict;
         }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakself initViewModel];
+        });
     });
 }
 
 
 #pragma mark - CustomTableViewDelegate
 //
-- (UITableViewCell *)tableView:(UITableView *)tableView CellAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *cellider = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellider];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellider];
-    }
-    cell.textLabel.text = self.sourceArry[indexPath.row];
-    return cell;
-}
+//- (UITableViewCell *)tableView:(UITableView *)tableView CellAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    static NSString *cellider = @"cell";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellider];
+//    if (cell == nil) {
+//        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellider];
+//    }
+//    cell.textLabel.text = self.sourceArry[indexPath.row];
+//    return cell;
+//}
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (_lattoryDict == nil) {
-        return;
-    }
-    NSString *name = @"";
-    switch (indexPath.row) {
-        case 0:     //全国彩列表
-            name = @"country";
-            break;
-        case 1:     //高频彩列表
-            name = @"gaopin";
-            break;
-        case 2:     //
-            name = @"dipin";
-            break;
-        default:
-            break;
-    }
-    NSArray *arry = _lattoryDict[name];
-    ALDLofferyListController *listVc = [[ALDLofferyListController alloc]init];
-    listVc.sourceArry = arry;
-    [self.menuVC.navigationController pushViewController:listVc animated:YES];
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (_lattoryDict == nil) {
+//        return;
+//    }
+//    NSString *name = @"";
+//    switch (indexPath.row) {
+//        case 0:     //全国彩列表
+//            name = @"country";
+//            break;
+//        case 1:     //高频彩列表
+//            name = @"gaopin";
+//            break;
+//        case 2:     //
+//            name = @"dipin";
+//            break;
+//        default:
+//            break;
+//    }
+//    NSArray *arry = _lattoryDict[name];
+//    ALDLofferyListController *listVc = [[ALDLofferyListController alloc]init];
+//    listVc.sourceArry = arry;
+//    [self.menuVC.navigationController pushViewController:listVc animated:YES];
+//}
 
 
 #pragma mark - 按钮事件

@@ -58,6 +58,9 @@
 		CB7487FC204949A4005890C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC252046BE2C00F2CFB3 /* main.m */; };
 		CB7487FD204949AD005890C7 /* AppGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D13F2047CC0200B618B2 /* AppGuideController.m */; };
 		CB7487FE204949B1005890C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */; };
+		CB74880220495973005890C7 /* ALDHomeIndexViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB74880120495973005890C7 /* ALDHomeIndexViewModel.m */; };
+		CB74880520495B8D005890C7 /* AYESupplyOfGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB74880420495B8D005890C7 /* AYESupplyOfGoodsCell.m */; };
+		CB748809204962E4005890C7 /* Lotterys.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB748808204962E4005890C7 /* Lotterys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,6 +165,11 @@
 		CB7487F720492FDD005890C7 /* AMDNotificationSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMDNotificationSettingsViewController.h; sourceTree = "<group>"; };
 		CB7487F920493050005890C7 /* AMDFeedBackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMDFeedBackViewController.h; sourceTree = "<group>"; };
 		CB7487FA20493051005890C7 /* AMDFeedBackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMDFeedBackViewController.m; sourceTree = "<group>"; };
+		CB74880020495973005890C7 /* ALDHomeIndexViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDHomeIndexViewModel.h; sourceTree = "<group>"; };
+		CB74880120495973005890C7 /* ALDHomeIndexViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDHomeIndexViewModel.m; sourceTree = "<group>"; };
+		CB74880320495B8D005890C7 /* AYESupplyOfGoodsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYESupplyOfGoodsCell.h; sourceTree = "<group>"; };
+		CB74880420495B8D005890C7 /* AYESupplyOfGoodsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYESupplyOfGoodsCell.m; sourceTree = "<group>"; };
+		CB748808204962E4005890C7 /* Lotterys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Lotterys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,6 +398,7 @@
 		CB62D1912047F6EB00B618B2 /* ALDHome */ = {
 			isa = PBXGroup;
 			children = (
+				CB7487FF20495959005890C7 /* ViewModel */,
 				CB62D1922047F6EB00B618B2 /* Controller */,
 				CB62D1942047F6EB00B618B2 /* View */,
 			);
@@ -418,6 +427,8 @@
 		CB62D1942047F6EB00B618B2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB74880320495B8D005890C7 /* AYESupplyOfGoodsCell.h */,
+				CB74880420495B8D005890C7 /* AYESupplyOfGoodsCell.m */,
 				CB62D19B2047F73100B618B2 /* AASMenuCell.h */,
 				CB62D19A2047F73100B618B2 /* AASMenuCell.m */,
 			);
@@ -431,6 +442,7 @@
 				CB62D1A2204807E400B618B2 /* Index */,
 				CB7487EB20490F53005890C7 /* Lottery.bundle */,
 				CB7487ED204912BF005890C7 /* LotteryType.plist */,
+				CB748808204962E4005890C7 /* Lotterys.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -503,6 +515,15 @@
 				72A5A4ED20492075001F8C84 /* LotteryDrawResultListViewModel.m */,
 				CB7487E32048F509005890C7 /* ALDLotteryListVIewModel.h */,
 				CB7487E42048F509005890C7 /* ALDLotteryListVIewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CB7487FF20495959005890C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CB74880020495973005890C7 /* ALDHomeIndexViewModel.h */,
+				CB74880120495973005890C7 /* ALDHomeIndexViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -586,6 +607,7 @@
 				CB62D1C120480A3D00B618B2 /* menu_recommend@2x.png in Resources */,
 				CB62D1C420480A3D00B618B2 /* menu_store@2x.png in Resources */,
 				CB62D1BB20480A3D00B618B2 /* home_order-form@2x.png in Resources */,
+				CB748809204962E4005890C7 /* Lotterys.plist in Resources */,
 				CB62D1BD20480A3D00B618B2 /* home_statistics@2x.png in Resources */,
 				CB62D1B720480A3D00B618B2 /* home-share@2x.png in Resources */,
 				CB7487F020492601005890C7 /* Launch Screen.storyboard in Resources */,
@@ -654,10 +676,12 @@
 				72A5A4F82049264A001F8C84 /* ALDWaterfallLayoutCell.m in Sources */,
 				CB7487E52048F509005890C7 /* ALDLotteryListVIewModel.m in Sources */,
 				CB7487E72048F95B005890C7 /* ALDCountryViewModel.m in Sources */,
+				CB74880520495B8D005890C7 /* AYESupplyOfGoodsCell.m in Sources */,
 				CB62D1C82048112E00B618B2 /* AASMessageIndexController.m in Sources */,
 				CB62D19D2047F73B00B618B2 /* AMDHomeIndexController.m in Sources */,
 				CB7487E62048F95A005890C7 /* ALDCountryController.m in Sources */,
 				CB7487DF2048F33D005890C7 /* ALDLotteryTypeModel.m in Sources */,
+				CB74880220495973005890C7 /* ALDHomeIndexViewModel.m in Sources */,
 				CB62D1562047CC2E00B618B2 /* SSApnsPushService.m in Sources */,
 				CB62D19C2047F73900B618B2 /* AASMenuController.m in Sources */,
 				72A5A4EE20492075001F8C84 /* LotteryDrawResultListViewModel.m in Sources */,
