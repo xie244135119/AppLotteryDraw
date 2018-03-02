@@ -11,12 +11,15 @@
 #import "ALDWaterfallLayout.h"
 #import "ALDWaterfallLayoutCell.h"
 #import <Masonry/Masonry.h>
+#import "ALDLotteryListViewModel.h"
 
 NSString * const cellIdentifier = @"CellIdentifier";
 
 
 @interface ALDLofferyListController ()<UICollectionViewDataSource, ALDWaterfallLayoutDelegate>
-
+{
+    ALDLotteryListViewModel *_viewModel;
+}
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray<ALDImageInfoModel *> *images;
 
@@ -42,7 +45,18 @@ NSString * const cellIdentifier = @"CellIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initContentView];
+//    [self initContentView];
+    [self initViewModel];
+    self.titleView.title = @"彩票列表";
+}
+
+- (void)initViewModel{
+    ALDLotteryListViewModel *viewModel = [[ALDLotteryListViewModel alloc]init];
+    viewModel.senderController = self;
+    _viewModel = viewModel;
+    [viewModel prepareView];
+    viewModel.sourceArray = self.sourceArry;
+
 }
 
 - (void)initContentView {
