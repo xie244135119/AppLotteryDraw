@@ -10,9 +10,6 @@
 		0BE044220A69ED9281798DE0 /* libPods-AppLotteryDraw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 456991C49744B0399AE9CE80 /* libPods-AppLotteryDraw.a */; };
 		7280622A204916A40070C294 /* apps_uchat_xuanwonainiu.js in Resources */ = {isa = PBXBuildFile; fileRef = CB62D13A2047CC0200B618B2 /* apps_uchat_xuanwonainiu.js */; };
 		7280622B204916AC0070C294 /* GlobalConfigFile.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1452047CC0200B618B2 /* GlobalConfigFile.m */; };
-		72A5A4E920491AD8001F8C84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */; };
-		72A5A4EA20491AEB001F8C84 /* AppGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D13F2047CC0200B618B2 /* AppGuideController.m */; };
-		72A5A4EB20491C82001F8C84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC252046BE2C00F2CFB3 /* main.m */; };
 		72A5A4EE20492075001F8C84 /* LotteryDrawResultListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A5A4ED20492075001F8C84 /* LotteryDrawResultListViewModel.m */; };
 		72A5A4F22049241F001F8C84 /* ALDWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A5A4F12049241F001F8C84 /* ALDWaterfallLayout.m */; };
 		72A5A4F52049253E001F8C84 /* ALDImageInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A5A4F42049253E001F8C84 /* ALDImageInfoModel.m */; };
@@ -52,6 +49,15 @@
 		CB7487E52048F509005890C7 /* ALDLotteryListVIewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7487E42048F509005890C7 /* ALDLotteryListVIewModel.m */; };
 		CB7487E62048F95A005890C7 /* ALDCountryController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1832047EDB600B618B2 /* ALDCountryController.m */; };
 		CB7487E72048F95B005890C7 /* ALDCountryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7487D62048EDF4005890C7 /* ALDCountryViewModel.m */; };
+		CB7487EC20490F53005890C7 /* Lottery.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CB7487EB20490F53005890C7 /* Lottery.bundle */; };
+		CB7487EE204912BF005890C7 /* LotteryType.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB7487ED204912BF005890C7 /* LotteryType.plist */; };
+		CB7487F020492601005890C7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7487EF20492600005890C7 /* Launch Screen.storyboard */; };
+		CB7487F520492FB1005890C7 /* ASDSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7487F320492FB0005890C7 /* ASDSettingController.m */; };
+		CB7487F820492FDE005890C7 /* AMDNotificationSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7487F620492FDC005890C7 /* AMDNotificationSettingsViewController.m */; };
+		CB7487FB20493051005890C7 /* AMDFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7487FA20493051005890C7 /* AMDFeedBackViewController.m */; };
+		CB7487FC204949A4005890C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC252046BE2C00F2CFB3 /* main.m */; };
+		CB7487FD204949AD005890C7 /* AppGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D13F2047CC0200B618B2 /* AppGuideController.m */; };
+		CB7487FE204949B1005890C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +152,16 @@
 		CB7487E12048F3D0005890C7 /* ALDLofferyListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDLofferyListController.m; sourceTree = "<group>"; };
 		CB7487E32048F509005890C7 /* ALDLotteryListVIewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDLotteryListVIewModel.h; sourceTree = "<group>"; };
 		CB7487E42048F509005890C7 /* ALDLotteryListVIewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDLotteryListVIewModel.m; sourceTree = "<group>"; };
+		CB7487EB20490F53005890C7 /* Lottery.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Lottery.bundle; sourceTree = "<group>"; };
+		CB7487ED204912BF005890C7 /* LotteryType.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LotteryType.plist; sourceTree = "<group>"; };
+		CB7487EF20492600005890C7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		CB7487F220492C83005890C7 /* Hiragino Sans GB W3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hiragino Sans GB W3.otf"; sourceTree = "<group>"; };
+		CB7487F320492FB0005890C7 /* ASDSettingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDSettingController.m; sourceTree = "<group>"; };
+		CB7487F420492FB1005890C7 /* ASDSettingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDSettingController.h; sourceTree = "<group>"; };
+		CB7487F620492FDC005890C7 /* AMDNotificationSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMDNotificationSettingsViewController.m; sourceTree = "<group>"; };
+		CB7487F720492FDD005890C7 /* AMDNotificationSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMDNotificationSettingsViewController.h; sourceTree = "<group>"; };
+		CB7487F920493050005890C7 /* AMDFeedBackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMDFeedBackViewController.h; sourceTree = "<group>"; };
+		CB7487FA20493051005890C7 /* AMDFeedBackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMDFeedBackViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +245,7 @@
 				CB57DC1F2046BE2C00F2CFB3 /* Assets.xcassets */,
 				CB57DC242046BE2C00F2CFB3 /* Info.plist */,
 				CB57DC252046BE2C00F2CFB3 /* main.m */,
+				CB7487EF20492600005890C7 /* Launch Screen.storyboard */,
 				72A5A4F920492970001F8C84 /* 1.plist */,
 			);
 			path = AppLotteryDraw;
@@ -388,6 +405,12 @@
 				CB62D1962047F72300B618B2 /* AMDHomeIndexController.m */,
 				CB62D1C62048112D00B618B2 /* AASMessageIndexController.h */,
 				CB62D1C72048112D00B618B2 /* AASMessageIndexController.m */,
+				CB7487F420492FB1005890C7 /* ASDSettingController.h */,
+				CB7487F320492FB0005890C7 /* ASDSettingController.m */,
+				CB7487F720492FDD005890C7 /* AMDNotificationSettingsViewController.h */,
+				CB7487F620492FDC005890C7 /* AMDNotificationSettingsViewController.m */,
+				CB7487F920493050005890C7 /* AMDFeedBackViewController.h */,
+				CB7487FA20493051005890C7 /* AMDFeedBackViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -404,7 +427,10 @@
 		CB62D1A1204807E400B618B2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CB7487F220492C83005890C7 /* Hiragino Sans GB W3.otf */,
 				CB62D1A2204807E400B618B2 /* Index */,
+				CB7487EB20490F53005890C7 /* Lottery.bundle */,
+				CB7487ED204912BF005890C7 /* LotteryType.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -548,8 +574,10 @@
 				CB62D1BC20480A3D00B618B2 /* home_shopset@2x.png in Resources */,
 				CB62D1B820480A3D00B618B2 /* home_client@2x.png in Resources */,
 				CB62D1C220480A3D00B618B2 /* menu_set@2x.png in Resources */,
+				CB7487EE204912BF005890C7 /* LotteryType.plist in Resources */,
 				CB62D1CA204812A800B618B2 /* home_message@2x.png in Resources */,
 				CB62D1B920480A3D00B618B2 /* home_income@2x.png in Resources */,
+				CB7487EC20490F53005890C7 /* Lottery.bundle in Resources */,
 				CB62D1BA20480A3D00B618B2 /* home_menu@2x.png in Resources */,
 				7280622A204916A40070C294 /* apps_uchat_xuanwonainiu.js in Resources */,
 				CB62D1C520480A3D00B618B2 /* menubackground@2x.png in Resources */,
@@ -560,6 +588,7 @@
 				CB62D1BB20480A3D00B618B2 /* home_order-form@2x.png in Resources */,
 				CB62D1BD20480A3D00B618B2 /* home_statistics@2x.png in Resources */,
 				CB62D1B720480A3D00B618B2 /* home-share@2x.png in Resources */,
+				CB7487F020492601005890C7 /* Launch Screen.storyboard in Resources */,
 				CB62D1C320480A3D00B618B2 /* menu_signout@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,14 +648,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72A5A4EB20491C82001F8C84 /* main.m in Sources */,
-				72A5A4E920491AD8001F8C84 /* AppDelegate.m in Sources */,
+				CB7487FE204949B1005890C7 /* AppDelegate.m in Sources */,
+				CB7487FD204949AD005890C7 /* AppGuideController.m in Sources */,
+				CB7487FC204949A4005890C7 /* main.m in Sources */,
 				72A5A4F82049264A001F8C84 /* ALDWaterfallLayoutCell.m in Sources */,
 				CB7487E52048F509005890C7 /* ALDLotteryListVIewModel.m in Sources */,
 				CB7487E72048F95B005890C7 /* ALDCountryViewModel.m in Sources */,
 				CB62D1C82048112E00B618B2 /* AASMessageIndexController.m in Sources */,
 				CB62D19D2047F73B00B618B2 /* AMDHomeIndexController.m in Sources */,
-				72A5A4EA20491AEB001F8C84 /* AppGuideController.m in Sources */,
 				CB7487E62048F95A005890C7 /* ALDCountryController.m in Sources */,
 				CB7487DF2048F33D005890C7 /* ALDLotteryTypeModel.m in Sources */,
 				CB62D1562047CC2E00B618B2 /* SSApnsPushService.m in Sources */,
@@ -635,11 +664,14 @@
 				7280622B204916AC0070C294 /* GlobalConfigFile.m in Sources */,
 				CB62D19E2047F73E00B618B2 /* AASMenuCell.m in Sources */,
 				CB62D19F2047FD5100B618B2 /* DDMenuController.m in Sources */,
+				CB7487FB20493051005890C7 /* AMDFeedBackViewController.m in Sources */,
 				72A5A4F22049241F001F8C84 /* ALDWaterfallLayout.m in Sources */,
 				72BB135820490F1100EE0AC3 /* Data.m in Sources */,
 				CB62D1A02047FE1D00B618B2 /* AMDRootViewController+UMStatistic.m in Sources */,
 				72BB135720490F1100EE0AC3 /* LotteryModel.m in Sources */,
 				CB7487E22048F3D0005890C7 /* ALDLofferyListController.m in Sources */,
+				CB7487F820492FDE005890C7 /* AMDNotificationSettingsViewController.m in Sources */,
+				CB7487F520492FB1005890C7 /* ASDSettingController.m in Sources */,
 				CB62D1552047CC2900B618B2 /* SSApnsPushService+Config.m in Sources */,
 				72BB135120490F0000EE0AC3 /* LotteryDrawResultListCell.m in Sources */,
 				72BB135B20490F1B00EE0AC3 /* LotteryDrawResultListController.m in Sources */,

@@ -13,7 +13,7 @@
 
 
 // 瀑布流数据源
-@property(nonatomic, strong) NSArray *sourceArry;
+@property(nonatomic, strong) NSArray<NSDictionary *> *sourceArry;
 
 
 @end

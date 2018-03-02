@@ -10,6 +10,7 @@
 #import <SSBaseKit/SSGlobalVar.h>
 #import "AASMenuCell.h"
 #import <Masonry/Masonry.h>
+#import "ASDSettingController.h"
 //#import "AASTool.h"
 //#import "AASHelpCenterController.h"
 //#import "AASSetIndexController.h"
@@ -185,7 +186,8 @@
     switch (indexPath.row+1) {
         case 1:{//我的微店
             //
-            [self.menuVC showRootController:YES];
+//            [self.menuVC showRootController:YES];
+            NSLog(@" 咱不开放 ");
         }
             break;
 //        case 1:{//我的门店
@@ -210,6 +212,8 @@
         case 4:{//设置
 //            AASSetIndexController *feedBackVC = [[AASSetIndexController alloc]initWithTitle:@"设置" titileViewShow:YES tabBarShow:NO];
 //            [AASTool pushViewController:feedBackVC];
+            ASDSettingController *menuVc = [[ASDSettingController alloc]init];
+            [self.menuVC.navigationController pushViewController:menuVc animated:YES];
         }
             break;
             

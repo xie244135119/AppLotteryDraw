@@ -7,7 +7,7 @@
 //
 
 #import "ALDWaterfallLayoutCell.h"
-#import <UIImageView+WebCache.h>
+//#import <UIImageView+WebCache.h>
 #import <Masonry/Masonry.h>
 @interface ALDWaterfallLayoutCell()
 {
@@ -46,6 +46,6 @@
 - (void)setImageURL:(NSURL *)imageURL {
     _imageURL = imageURL;
     NSLog(@"-------%@",imageURL);
-    [_currentImageView sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"placeholder"]];
+//    [_currentImageView sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"placeholder"]];
 }
 @end
