@@ -124,7 +124,7 @@ NSString *const kDataOpentimestamp = @"opentimestamp";
 //分解opencode
 -(void)resolveOpenCode{
     NSArray  *array = [_opencode componentsSeparatedByString:@"+"];
-    if (array != 0) {
+    if (array.count != 1) {
         //蓝色号
         _blueArry = [array[1] componentsSeparatedByString:@","];
         //红色号

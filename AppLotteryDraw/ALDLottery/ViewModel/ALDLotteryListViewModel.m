@@ -47,7 +47,7 @@
 }
 
 -(void)setSourceArray:(NSArray *)sourceArray{
-    
+    _sourceArray = sourceArray;
     __weak AMDButton *_firstBt = nil;
     __weak AMDButton *_lastBt = nil;
     __block AMDButton *_upBt = nil;
@@ -74,7 +74,7 @@
         [shareBt.imageView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.right.offset(-3);
             make.top.left.offset(3);
-            make.height.offset(95);
+            make.height.equalTo(shareBt.imageView.mas_width);
             make.centerX.equalTo(shareBt.mas_centerX);
         }];
         
@@ -131,7 +131,9 @@
 }
 
 - (void)clickAction:(AMDButton *)sender{
+    NSDictionary *sourceDic =  _sourceArray[sender.tag];
     LotteryDrawResultListController *VC = [[LotteryDrawResultListController alloc]init];
+    VC.lotteryCode = sourceDic[@"lotteryCode"];
     [_senderController.navigationController pushViewController:VC animated:YES];
 }
 @end

@@ -44,7 +44,7 @@
     //初始化一个session
     NSURLSession *session = [NSURLSession sharedSession];
     //通过地址得到一个url
-    NSString *urlStr = @"http://f.apiplus.net/dlt-20.json";
+    NSString *urlStr = [NSString stringWithFormat:@"http://f.apiplus.net/%@.json",self.lotteryCode];
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLSessionTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data
