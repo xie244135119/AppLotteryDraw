@@ -15,7 +15,9 @@
 #import "ALDCountryController.h"
 
 @interface AMDHomeIndexController ()<CustomTableViewDelegate>
-
+{
+    NSDictionary *_lattoryDict;             //所有彩种数据源
+}
 @property(nonatomic, strong) NSArray *sourceArry;       //数据
 @end
 
@@ -27,6 +29,7 @@
     //
     [self initTableView];
     [self initNavView:self.titleView];
+    [self loadDict];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,6 +75,20 @@
 }
 
 
+#pragma mark - private api
+// 初始化字典
+- (void)loadDict
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        if (_lattoryDict == nil) {
+            NSString *plistpath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"LotteryType.plist"];
+            NSDictionary *dict = [[NSDictionary alloc]initWithContentsOfFile:plistpath];
+            _lattoryDict = dict;
+        }
+    });
+}
+
+
 #pragma mark - CustomTableViewDelegate
 //
 - (UITableViewCell *)tableView:(UITableView *)tableView CellAtIndexPath:(NSIndexPath *)indexPath
@@ -87,26 +104,26 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (_lattoryDict == nil) {
+        return;
+    }
+    NSString *name = @"";
     switch (indexPath.row) {
         case 0:     //全国彩列表
-        {
-            
-        }
+            name = @"country";
             break;
         case 1:     //高频彩列表
-        {
-            
-        }
+            name = @"gaopin";
             break;
         case 2:     //
-        {
-            
-        }
+            name = @"dipin";
             break;
         default:
             break;
     }
-    ALDCountryController *listVc = [[ALDCountryController alloc]init];
+    NSArray *arry = _lattoryDict[name];
+    ALDLofferyListController *listVc = [[ALDLofferyListController alloc]init];
+    listVc.sourceArry = arry;
     [self.menuVC.navigationController pushViewController:listVc animated:YES];
 }
 
