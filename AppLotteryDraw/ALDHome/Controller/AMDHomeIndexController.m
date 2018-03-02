@@ -86,10 +86,10 @@
 //
 - (void)initViewModel
 {
-    
     ALDHomeIndexViewModel *vM = [[ALDHomeIndexViewModel alloc]init];
     vM.superView = self.contentView;
     vM.senderController = self.menuVC;
+    vM.lotteryTypeDict = _lattoryDict;
     [vM prepareViewBySuper];
     _viewModel = vM;
 }

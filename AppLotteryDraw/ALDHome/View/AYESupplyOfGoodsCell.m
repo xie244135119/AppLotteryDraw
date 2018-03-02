@@ -31,6 +31,11 @@
     [super setHighlighted:highlighted animated:animated];
 }
 
++ (CGFloat)cellHeight
+{
+    return 190;
+}
+
 
 - (void)initContentView
 {
@@ -42,7 +47,7 @@
     _currentMiddelView = middleView;
     
     // 供应商名称
-    AMDButton *namelb = [[AMDButton alloc]initWithFrame:CGRectMake(55, 10, SScreenWidth-80-24-10-55, 17)];
+    AMDButton *namelb = [[AMDButton alloc]initWithFrame:CGRectMake(15, 10, SScreenWidth-80-24-10-55, 17)];
     namelb.titleLabel.textAlignment = NSTextAlignmentLeft;
     namelb.backgroundColor = [UIColor clearColor];
     namelb.titleLabel.font = SSFontWithName(@"", 14);
@@ -50,9 +55,12 @@
     [middleView addSubview:namelb];
     _supplierNameBt = namelb;
     
+    AMDLineView *middleline = [[AMDLineView alloc]initWithFrame:CGRectMake(0, 37, SScreenWidth, 0.5) Color:SSColorWithRGB(230, 230, 230, 0.5)];
+    [middleView addSubview:middleline];
+    
     //商品展示视图
     CGFloat photowidth = (SScreenWidth-(4*2)-(10*2))/3;
-    UIView *goodsShowView = [[UIView alloc]initWithFrame:CGRectMake(0, 30+10, SScreenWidth, photowidth+12)];
+    UIView *goodsShowView = [[UIView alloc]initWithFrame:CGRectMake(0, 37+10, SScreenWidth, photowidth+12)];
     [middleView addSubview:goodsShowView];
     _goodsSourceShowView = goodsShowView;
     

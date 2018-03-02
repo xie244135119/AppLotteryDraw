@@ -29,6 +29,8 @@
 // 配置店铺标题
 - (void)configSupplyTitle:(NSString *)title;
 
+// cell高度
++ (CGFloat)cellHeight;
 
 
 @end
