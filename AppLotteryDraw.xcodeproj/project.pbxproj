@@ -7,18 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		728A72082047A235005666C0 /* LotteryDrawResultListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728A72052047A235005666C0 /* LotteryDrawResultListController.m */; };
 		728A72132047A38E005666C0 /* LotteryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 728A72112047A38E005666C0 /* LotteryModel.m */; };
 		728A72142047A38E005666C0 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 728A72122047A38E005666C0 /* Data.m */; };
-		728A72172047A47D005666C0 /* LotteryDrawResultListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 728A72162047A47D005666C0 /* LotteryDrawResultListView.m */; };
-		728A721A2047A4C9005666C0 /* LotteryDrawResultListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 728A72192047A4C9005666C0 /* LotteryDrawResultListCell.m */; };
 		C06EEB5FC67311FC339B0241 /* libPods-AppLotteryDraw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0DC27F9A5C1236FB97873C /* libPods-AppLotteryDraw.a */; };
-		CB57DC182046BE2C00F2CFB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */; };
 		CB57DC202046BE2C00F2CFB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB57DC1F2046BE2C00F2CFB3 /* Assets.xcassets */; };
-		CB57DC262046BE2C00F2CFB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC252046BE2C00F2CFB3 /* main.m */; };
 		CB62D1552047CC2900B618B2 /* SSApnsPushService+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1302047CC0200B618B2 /* SSApnsPushService+Config.m */; };
 		CB62D1562047CC2E00B618B2 /* SSApnsPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1322047CC0200B618B2 /* SSApnsPushService.m */; };
-		CB62D17D2047D64F00B618B2 /* AppGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D16E2047D64000B618B2 /* AppGuideController.m */; };
 		CB62D19C2047F73900B618B2 /* AASMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1972047F72300B618B2 /* AASMenuController.m */; };
 		CB62D19D2047F73B00B618B2 /* AMDHomeIndexController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1962047F72300B618B2 /* AMDHomeIndexController.m */; };
 		CB62D19E2047F73E00B618B2 /* AASMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D19A2047F73100B618B2 /* AASMenuCell.m */; };
@@ -46,6 +40,15 @@
 		CB7487E52048F509005890C7 /* ALDLotteryListVIewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7487E42048F509005890C7 /* ALDLotteryListVIewModel.m */; };
 		CB7487E62048F95A005890C7 /* ALDCountryController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1832047EDB600B618B2 /* ALDCountryController.m */; };
 		CB7487E72048F95B005890C7 /* ALDCountryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7487D62048EDF4005890C7 /* ALDCountryViewModel.m */; };
+		CB7487E920490A74005890C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */; };
+		CB7487EA20490A9D005890C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC252046BE2C00F2CFB3 /* main.m */; };
+		CB7487EC20490F53005890C7 /* Lottery.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CB7487EB20490F53005890C7 /* Lottery.bundle */; };
+		CB7487EE204912BF005890C7 /* LotteryType.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB7487ED204912BF005890C7 /* LotteryType.plist */; };
+		CB7487F020492601005890C7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7487EF20492600005890C7 /* Launch Screen.storyboard */; };
+		CB7487F1204929CD005890C7 /* AppGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D13F2047CC0200B618B2 /* AppGuideController.m */; };
+		CB7487F520492FB1005890C7 /* ASDSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7487F320492FB0005890C7 /* ASDSettingController.m */; };
+		CB7487F820492FDE005890C7 /* AMDNotificationSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7487F620492FDC005890C7 /* AMDNotificationSettingsViewController.m */; };
+		CB7487FB20493051005890C7 /* AMDFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7487FA20493051005890C7 /* AMDFeedBackViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,35 +100,6 @@
 		CB62D1522047CC0200B618B2 /* AMDImageView+ImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AMDImageView+ImageCache.m"; sourceTree = "<group>"; };
 		CB62D1532047CC0200B618B2 /* AMDTabbarItem+Custom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AMDTabbarItem+Custom.h"; sourceTree = "<group>"; };
 		CB62D1542047CC0200B618B2 /* AMDTabbarItem+Custom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AMDTabbarItem+Custom.m"; sourceTree = "<group>"; };
-		CB62D15C2047D64000B618B2 /* AMDRequestModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMDRequestModule.h; sourceTree = "<group>"; };
-		CB62D15D2047D64000B618B2 /* AMDRequestModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMDRequestModule.m; sourceTree = "<group>"; };
-		CB62D15E2047D64000B618B2 /* SSApnsPushService+Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SSApnsPushService+Config.h"; sourceTree = "<group>"; };
-		CB62D15F2047D64000B618B2 /* SSApnsPushService+Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SSApnsPushService+Config.m"; sourceTree = "<group>"; };
-		CB62D1602047D64000B618B2 /* SSApnsPushService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSApnsPushService.h; sourceTree = "<group>"; };
-		CB62D1612047D64000B618B2 /* SSApnsPushService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSApnsPushService.m; sourceTree = "<group>"; };
-		CB62D1622047D64000B618B2 /* SSEvokeAppService+Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SSEvokeAppService+Config.h"; sourceTree = "<group>"; };
-		CB62D1632047D64000B618B2 /* SSEvokeAppService+Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SSEvokeAppService+Config.m"; sourceTree = "<group>"; };
-		CB62D1642047D64000B618B2 /* SSUMMobService+Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SSUMMobService+Config.h"; sourceTree = "<group>"; };
-		CB62D1652047D64000B618B2 /* SSUMMobService+Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SSUMMobService+Config.m"; sourceTree = "<group>"; };
-		CB62D1672047D64000B618B2 /* AMDAnimationWebView+UserAgent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AMDAnimationWebView+UserAgent.h"; sourceTree = "<group>"; };
-		CB62D1682047D64000B618B2 /* AMDAnimationWebView+UserAgent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AMDAnimationWebView+UserAgent.m"; sourceTree = "<group>"; };
-		CB62D1692047D64000B618B2 /* apps_uchat_xuanwonainiu.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = apps_uchat_xuanwonainiu.js; sourceTree = "<group>"; };
-		CB62D16B2047D64000B618B2 /* AMDRootViewController+UMStatistic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AMDRootViewController+UMStatistic.h"; sourceTree = "<group>"; };
-		CB62D16C2047D64000B618B2 /* AMDRootViewController+UMStatistic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AMDRootViewController+UMStatistic.m"; sourceTree = "<group>"; };
-		CB62D16D2047D64000B618B2 /* AppGuideController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppGuideController.h; sourceTree = "<group>"; };
-		CB62D16E2047D64000B618B2 /* AppGuideController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppGuideController.m; sourceTree = "<group>"; };
-		CB62D1702047D64000B618B2 /* GlobalConfigFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalConfigFile.h; sourceTree = "<group>"; };
-		CB62D1712047D64000B618B2 /* GlobalConfigFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalConfigFile.m; sourceTree = "<group>"; };
-		CB62D1722047D64000B618B2 /* LoginInfoStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginInfoStorage.h; sourceTree = "<group>"; };
-		CB62D1732047D64000B618B2 /* LoginInfoStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginInfoStorage.m; sourceTree = "<group>"; };
-		CB62D1752047D64000B618B2 /* AMDAdvertiseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMDAdvertiseView.h; sourceTree = "<group>"; };
-		CB62D1762047D64000B618B2 /* AMDAdvertiseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMDAdvertiseView.m; sourceTree = "<group>"; };
-		CB62D1772047D64000B618B2 /* AMDButton+ImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AMDButton+ImageCache.h"; sourceTree = "<group>"; };
-		CB62D1782047D64000B618B2 /* AMDButton+ImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AMDButton+ImageCache.m"; sourceTree = "<group>"; };
-		CB62D1792047D64000B618B2 /* AMDImageView+ImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AMDImageView+ImageCache.h"; sourceTree = "<group>"; };
-		CB62D17A2047D64000B618B2 /* AMDImageView+ImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AMDImageView+ImageCache.m"; sourceTree = "<group>"; };
-		CB62D17B2047D64000B618B2 /* AMDTabbarItem+Custom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AMDTabbarItem+Custom.h"; sourceTree = "<group>"; };
-		CB62D17C2047D64000B618B2 /* AMDTabbarItem+Custom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AMDTabbarItem+Custom.m"; sourceTree = "<group>"; };
 		CB62D1822047EDB600B618B2 /* ALDCountryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDCountryController.h; sourceTree = "<group>"; };
 		CB62D1832047EDB600B618B2 /* ALDCountryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDCountryController.m; sourceTree = "<group>"; };
 		CB62D1892047F59500B618B2 /* DDMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
@@ -162,6 +136,16 @@
 		CB7487E12048F3D0005890C7 /* ALDLofferyListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDLofferyListController.m; sourceTree = "<group>"; };
 		CB7487E32048F509005890C7 /* ALDLotteryListVIewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDLotteryListVIewModel.h; sourceTree = "<group>"; };
 		CB7487E42048F509005890C7 /* ALDLotteryListVIewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDLotteryListVIewModel.m; sourceTree = "<group>"; };
+		CB7487EB20490F53005890C7 /* Lottery.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Lottery.bundle; sourceTree = "<group>"; };
+		CB7487ED204912BF005890C7 /* LotteryType.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LotteryType.plist; sourceTree = "<group>"; };
+		CB7487EF20492600005890C7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		CB7487F220492C83005890C7 /* Hiragino Sans GB W3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hiragino Sans GB W3.otf"; sourceTree = "<group>"; };
+		CB7487F320492FB0005890C7 /* ASDSettingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASDSettingController.m; sourceTree = "<group>"; };
+		CB7487F420492FB1005890C7 /* ASDSettingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASDSettingController.h; sourceTree = "<group>"; };
+		CB7487F620492FDC005890C7 /* AMDNotificationSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMDNotificationSettingsViewController.m; sourceTree = "<group>"; };
+		CB7487F720492FDD005890C7 /* AMDNotificationSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMDNotificationSettingsViewController.h; sourceTree = "<group>"; };
+		CB7487F920493050005890C7 /* AMDFeedBackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMDFeedBackViewController.h; sourceTree = "<group>"; };
+		CB7487FA20493051005890C7 /* AMDFeedBackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMDFeedBackViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,7 +235,6 @@
 				CB62D1912047F6EB00B618B2 /* ALDHome */,
 				CB62D12B2047CC0200B618B2 /* AMDBase */,
 				CB62D1592047D64000B618B2 /* ALDCountry */,
-				CB62D15A2047D64000B618B2 /* AMDBase */,
 				CB7487D82048F2EE005890C7 /* ALDLottery */,
 				728A72032047A235005666C0 /* Controller */,
 				728A72062047A235005666C0 /* Model */,
@@ -263,6 +246,7 @@
 				CB57DC1F2046BE2C00F2CFB3 /* Assets.xcassets */,
 				CB57DC242046BE2C00F2CFB3 /* Info.plist */,
 				CB57DC252046BE2C00F2CFB3 /* main.m */,
+				CB7487EF20492600005890C7 /* Launch Screen.storyboard */,
 			);
 			path = AppLotteryDraw;
 			sourceTree = "<group>";
@@ -354,82 +338,6 @@
 			path = ALDCountry;
 			sourceTree = "<group>";
 		};
-		CB62D15A2047D64000B618B2 /* AMDBase */ = {
-			isa = PBXGroup;
-			children = (
-				CB62D15B2047D64000B618B2 /* BaseModules */,
-				CB62D1662047D64000B618B2 /* CommonView */,
-				CB62D16A2047D64000B618B2 /* Controller */,
-				CB62D16F2047D64000B618B2 /* Utility */,
-				CB62D1742047D64000B618B2 /* View */,
-			);
-			path = AMDBase;
-			sourceTree = "<group>";
-		};
-		CB62D15B2047D64000B618B2 /* BaseModules */ = {
-			isa = PBXGroup;
-			children = (
-				CB62D15C2047D64000B618B2 /* AMDRequestModule.h */,
-				CB62D15D2047D64000B618B2 /* AMDRequestModule.m */,
-				CB62D15E2047D64000B618B2 /* SSApnsPushService+Config.h */,
-				CB62D15F2047D64000B618B2 /* SSApnsPushService+Config.m */,
-				CB62D1602047D64000B618B2 /* SSApnsPushService.h */,
-				CB62D1612047D64000B618B2 /* SSApnsPushService.m */,
-				CB62D1622047D64000B618B2 /* SSEvokeAppService+Config.h */,
-				CB62D1632047D64000B618B2 /* SSEvokeAppService+Config.m */,
-				CB62D1642047D64000B618B2 /* SSUMMobService+Config.h */,
-				CB62D1652047D64000B618B2 /* SSUMMobService+Config.m */,
-			);
-			path = BaseModules;
-			sourceTree = "<group>";
-		};
-		CB62D1662047D64000B618B2 /* CommonView */ = {
-			isa = PBXGroup;
-			children = (
-				CB62D1672047D64000B618B2 /* AMDAnimationWebView+UserAgent.h */,
-				CB62D1682047D64000B618B2 /* AMDAnimationWebView+UserAgent.m */,
-				CB62D1692047D64000B618B2 /* apps_uchat_xuanwonainiu.js */,
-			);
-			path = CommonView;
-			sourceTree = "<group>";
-		};
-		CB62D16A2047D64000B618B2 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				CB62D16B2047D64000B618B2 /* AMDRootViewController+UMStatistic.h */,
-				CB62D16C2047D64000B618B2 /* AMDRootViewController+UMStatistic.m */,
-				CB62D16D2047D64000B618B2 /* AppGuideController.h */,
-				CB62D16E2047D64000B618B2 /* AppGuideController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		CB62D16F2047D64000B618B2 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				CB62D1702047D64000B618B2 /* GlobalConfigFile.h */,
-				CB62D1712047D64000B618B2 /* GlobalConfigFile.m */,
-				CB62D1722047D64000B618B2 /* LoginInfoStorage.h */,
-				CB62D1732047D64000B618B2 /* LoginInfoStorage.m */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		CB62D1742047D64000B618B2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CB62D1752047D64000B618B2 /* AMDAdvertiseView.h */,
-				CB62D1762047D64000B618B2 /* AMDAdvertiseView.m */,
-				CB62D1772047D64000B618B2 /* AMDButton+ImageCache.h */,
-				CB62D1782047D64000B618B2 /* AMDButton+ImageCache.m */,
-				CB62D1792047D64000B618B2 /* AMDImageView+ImageCache.h */,
-				CB62D17A2047D64000B618B2 /* AMDImageView+ImageCache.m */,
-				CB62D17B2047D64000B618B2 /* AMDTabbarItem+Custom.h */,
-				CB62D17C2047D64000B618B2 /* AMDTabbarItem+Custom.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		CB62D17E2047E97500B618B2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,6 +423,12 @@
 				CB62D1962047F72300B618B2 /* AMDHomeIndexController.m */,
 				CB62D1C62048112D00B618B2 /* AASMessageIndexController.h */,
 				CB62D1C72048112D00B618B2 /* AASMessageIndexController.m */,
+				CB7487F420492FB1005890C7 /* ASDSettingController.h */,
+				CB7487F320492FB0005890C7 /* ASDSettingController.m */,
+				CB7487F720492FDD005890C7 /* AMDNotificationSettingsViewController.h */,
+				CB7487F620492FDC005890C7 /* AMDNotificationSettingsViewController.m */,
+				CB7487F920493050005890C7 /* AMDFeedBackViewController.h */,
+				CB7487FA20493051005890C7 /* AMDFeedBackViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -545,7 +459,10 @@
 		CB62D1A1204807E400B618B2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CB7487F220492C83005890C7 /* Hiragino Sans GB W3.otf */,
 				CB62D1A2204807E400B618B2 /* Index */,
+				CB7487EB20490F53005890C7 /* Lottery.bundle */,
+				CB7487ED204912BF005890C7 /* LotteryType.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -684,8 +601,10 @@
 				CB62D1BC20480A3D00B618B2 /* home_shopset@2x.png in Resources */,
 				CB62D1B820480A3D00B618B2 /* home_client@2x.png in Resources */,
 				CB62D1C220480A3D00B618B2 /* menu_set@2x.png in Resources */,
+				CB7487EE204912BF005890C7 /* LotteryType.plist in Resources */,
 				CB62D1CA204812A800B618B2 /* home_message@2x.png in Resources */,
 				CB62D1B920480A3D00B618B2 /* home_income@2x.png in Resources */,
+				CB7487EC20490F53005890C7 /* Lottery.bundle in Resources */,
 				CB62D1BA20480A3D00B618B2 /* home_menu@2x.png in Resources */,
 				CB62D1C520480A3D00B618B2 /* menubackground@2x.png in Resources */,
 				CB62D1BE20480A3D00B618B2 /* loadingimg@2x.png in Resources */,
@@ -695,6 +614,7 @@
 				CB62D1BB20480A3D00B618B2 /* home_order-form@2x.png in Resources */,
 				CB62D1BD20480A3D00B618B2 /* home_statistics@2x.png in Resources */,
 				CB62D1B720480A3D00B618B2 /* home-share@2x.png in Resources */,
+				CB7487F020492601005890C7 /* Launch Screen.storyboard in Resources */,
 				CB62D1C320480A3D00B618B2 /* menu_signout@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -754,27 +674,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB7487EA20490A9D005890C7 /* main.m in Sources */,
+				CB7487E920490A74005890C7 /* AppDelegate.m in Sources */,
 				CB7487E52048F509005890C7 /* ALDLotteryListVIewModel.m in Sources */,
 				CB7487E72048F95B005890C7 /* ALDCountryViewModel.m in Sources */,
 				CB62D1C82048112E00B618B2 /* AASMessageIndexController.m in Sources */,
-				CB62D17D2047D64F00B618B2 /* AppGuideController.m in Sources */,
 				CB62D19D2047F73B00B618B2 /* AMDHomeIndexController.m in Sources */,
 				CB7487E62048F95A005890C7 /* ALDCountryController.m in Sources */,
 				CB7487DF2048F33D005890C7 /* ALDLotteryTypeModel.m in Sources */,
-				CB57DC262046BE2C00F2CFB3 /* main.m in Sources */,
 				CB62D1562047CC2E00B618B2 /* SSApnsPushService.m in Sources */,
 				CB62D19C2047F73900B618B2 /* AASMenuController.m in Sources */,
 				CB62D19E2047F73E00B618B2 /* AASMenuCell.m in Sources */,
 				CB62D19F2047FD5100B618B2 /* DDMenuController.m in Sources */,
-				CB57DC182046BE2C00F2CFB3 /* AppDelegate.m in Sources */,
+				CB7487FB20493051005890C7 /* AMDFeedBackViewController.m in Sources */,
+				CB7487F1204929CD005890C7 /* AppGuideController.m in Sources */,
 				CB62D1A02047FE1D00B618B2 /* AMDRootViewController+UMStatistic.m in Sources */,
 				CB7487E22048F3D0005890C7 /* ALDLofferyListController.m in Sources */,
+				CB7487F820492FDE005890C7 /* AMDNotificationSettingsViewController.m in Sources */,
+				CB7487F520492FB1005890C7 /* ASDSettingController.m in Sources */,
 				CB62D1552047CC2900B618B2 /* SSApnsPushService+Config.m in Sources */,
-				728A72082047A235005666C0 /* LotteryDrawResultListController.m in Sources */,
-				728A72172047A47D005666C0 /* LotteryDrawResultListView.m in Sources */,
-				CB57DC262046BE2C00F2CFB3 /* main.m in Sources */,
-				728A721A2047A4C9005666C0 /* LotteryDrawResultListCell.m in Sources */,
-				CB57DC182046BE2C00F2CFB3 /* AppDelegate.m in Sources */,
 				728A72142047A38E005666C0 /* Data.m in Sources */,
 				728A72132047A38E005666C0 /* LotteryModel.m in Sources */,
 			);
