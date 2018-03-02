@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		728A72132047A38E005666C0 /* LotteryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 728A72112047A38E005666C0 /* LotteryModel.m */; };
-		728A72142047A38E005666C0 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 728A72122047A38E005666C0 /* Data.m */; };
-		C06EEB5FC67311FC339B0241 /* libPods-AppLotteryDraw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0DC27F9A5C1236FB97873C /* libPods-AppLotteryDraw.a */; };
+		0BE044220A69ED9281798DE0 /* libPods-AppLotteryDraw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 456991C49744B0399AE9CE80 /* libPods-AppLotteryDraw.a */; };
+		7280622A204916A40070C294 /* apps_uchat_xuanwonainiu.js in Resources */ = {isa = PBXBuildFile; fileRef = CB62D13A2047CC0200B618B2 /* apps_uchat_xuanwonainiu.js */; };
+		7280622B204916AC0070C294 /* GlobalConfigFile.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1452047CC0200B618B2 /* GlobalConfigFile.m */; };
+		72A5A4EE20492075001F8C84 /* LotteryDrawResultListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A5A4ED20492075001F8C84 /* LotteryDrawResultListViewModel.m */; };
+		72A5A4F22049241F001F8C84 /* ALDWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A5A4F12049241F001F8C84 /* ALDWaterfallLayout.m */; };
+		72A5A4F52049253E001F8C84 /* ALDImageInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A5A4F42049253E001F8C84 /* ALDImageInfoModel.m */; };
+		72A5A4F82049264A001F8C84 /* ALDWaterfallLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A5A4F72049264A001F8C84 /* ALDWaterfallLayoutCell.m */; };
+		72A5A4FA20492970001F8C84 /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72A5A4F920492970001F8C84 /* 1.plist */; };
+		72BB135120490F0000EE0AC3 /* LotteryDrawResultListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BB134E20490EFF00EE0AC3 /* LotteryDrawResultListCell.m */; };
+		72BB135720490F1100EE0AC3 /* LotteryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BB135420490F1100EE0AC3 /* LotteryModel.m */; };
+		72BB135820490F1100EE0AC3 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BB135620490F1100EE0AC3 /* Data.m */; };
+		72BB135B20490F1B00EE0AC3 /* LotteryDrawResultListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BB135920490F1B00EE0AC3 /* LotteryDrawResultListController.m */; };
 		CB57DC202046BE2C00F2CFB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB57DC1F2046BE2C00F2CFB3 /* Assets.xcassets */; };
 		CB62D1552047CC2900B618B2 /* SSApnsPushService+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1302047CC0200B618B2 /* SSApnsPushService+Config.m */; };
 		CB62D1562047CC2E00B618B2 /* SSApnsPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1322047CC0200B618B2 /* SSApnsPushService.m */; };
@@ -40,31 +49,38 @@
 		CB7487E52048F509005890C7 /* ALDLotteryListVIewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7487E42048F509005890C7 /* ALDLotteryListVIewModel.m */; };
 		CB7487E62048F95A005890C7 /* ALDCountryController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1832047EDB600B618B2 /* ALDCountryController.m */; };
 		CB7487E72048F95B005890C7 /* ALDCountryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7487D62048EDF4005890C7 /* ALDCountryViewModel.m */; };
-		CB7487E920490A74005890C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */; };
-		CB7487EA20490A9D005890C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC252046BE2C00F2CFB3 /* main.m */; };
 		CB7487EC20490F53005890C7 /* Lottery.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CB7487EB20490F53005890C7 /* Lottery.bundle */; };
 		CB7487EE204912BF005890C7 /* LotteryType.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB7487ED204912BF005890C7 /* LotteryType.plist */; };
 		CB7487F020492601005890C7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7487EF20492600005890C7 /* Launch Screen.storyboard */; };
-		CB7487F1204929CD005890C7 /* AppGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D13F2047CC0200B618B2 /* AppGuideController.m */; };
 		CB7487F520492FB1005890C7 /* ASDSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7487F320492FB0005890C7 /* ASDSettingController.m */; };
 		CB7487F820492FDE005890C7 /* AMDNotificationSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7487F620492FDC005890C7 /* AMDNotificationSettingsViewController.m */; };
 		CB7487FB20493051005890C7 /* AMDFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7487FA20493051005890C7 /* AMDFeedBackViewController.m */; };
+		CB7487FC204949A4005890C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC252046BE2C00F2CFB3 /* main.m */; };
+		CB7487FD204949AD005890C7 /* AppGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D13F2047CC0200B618B2 /* AppGuideController.m */; };
+		CB7487FE204949B1005890C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0142D65FD1C0B123102BC25C /* Pods-AppLotteryDraw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLotteryDraw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppLotteryDraw/Pods-AppLotteryDraw.debug.xcconfig"; sourceTree = "<group>"; };
 		1D3B304FAB1AFD7CFA826C15 /* Pods-AppLotteryDraw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLotteryDraw.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppLotteryDraw/Pods-AppLotteryDraw.release.xcconfig"; sourceTree = "<group>"; };
-		5F0DC27F9A5C1236FB97873C /* libPods-AppLotteryDraw.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppLotteryDraw.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		728A72042047A235005666C0 /* LotteryDrawResultListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryDrawResultListController.h; sourceTree = "<group>"; };
-		728A72052047A235005666C0 /* LotteryDrawResultListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryDrawResultListController.m; sourceTree = "<group>"; };
-		728A720F2047A38E005666C0 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
-		728A72102047A38E005666C0 /* LotteryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryModel.h; sourceTree = "<group>"; };
-		728A72112047A38E005666C0 /* LotteryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryModel.m; sourceTree = "<group>"; };
-		728A72122047A38E005666C0 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
-		728A72152047A47D005666C0 /* LotteryDrawResultListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LotteryDrawResultListView.h; sourceTree = "<group>"; };
-		728A72162047A47D005666C0 /* LotteryDrawResultListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LotteryDrawResultListView.m; sourceTree = "<group>"; };
-		728A72182047A4C9005666C0 /* LotteryDrawResultListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LotteryDrawResultListCell.h; sourceTree = "<group>"; };
-		728A72192047A4C9005666C0 /* LotteryDrawResultListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LotteryDrawResultListCell.m; sourceTree = "<group>"; };
+		456991C49744B0399AE9CE80 /* libPods-AppLotteryDraw.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppLotteryDraw.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72A5A4EC20492075001F8C84 /* LotteryDrawResultListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryDrawResultListViewModel.h; sourceTree = "<group>"; };
+		72A5A4ED20492075001F8C84 /* LotteryDrawResultListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryDrawResultListViewModel.m; sourceTree = "<group>"; };
+		72A5A4F02049241F001F8C84 /* ALDWaterfallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDWaterfallLayout.h; sourceTree = "<group>"; };
+		72A5A4F12049241F001F8C84 /* ALDWaterfallLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDWaterfallLayout.m; sourceTree = "<group>"; };
+		72A5A4F32049253E001F8C84 /* ALDImageInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDImageInfoModel.h; sourceTree = "<group>"; };
+		72A5A4F42049253E001F8C84 /* ALDImageInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDImageInfoModel.m; sourceTree = "<group>"; };
+		72A5A4F62049264A001F8C84 /* ALDWaterfallLayoutCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDWaterfallLayoutCell.h; sourceTree = "<group>"; };
+		72A5A4F72049264A001F8C84 /* ALDWaterfallLayoutCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDWaterfallLayoutCell.m; sourceTree = "<group>"; };
+		72A5A4F920492970001F8C84 /* 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 1.plist; sourceTree = "<group>"; };
+		72BB134D20490EFF00EE0AC3 /* LotteryDrawResultListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryDrawResultListCell.h; sourceTree = "<group>"; };
+		72BB134E20490EFF00EE0AC3 /* LotteryDrawResultListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryDrawResultListCell.m; sourceTree = "<group>"; };
+		72BB135320490F1000EE0AC3 /* LotteryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryModel.h; sourceTree = "<group>"; };
+		72BB135420490F1100EE0AC3 /* LotteryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryModel.m; sourceTree = "<group>"; };
+		72BB135520490F1100EE0AC3 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		72BB135620490F1100EE0AC3 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
+		72BB135920490F1B00EE0AC3 /* LotteryDrawResultListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryDrawResultListController.m; sourceTree = "<group>"; };
+		72BB135A20490F1B00EE0AC3 /* LotteryDrawResultListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryDrawResultListController.h; sourceTree = "<group>"; };
 		CB57DC132046BE2C00F2CFB3 /* AppLotteryDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppLotteryDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB57DC162046BE2C00F2CFB3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -153,7 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C06EEB5FC67311FC339B0241 /* libPods-AppLotteryDraw.a in Frameworks */,
+				0BE044220A69ED9281798DE0 /* libPods-AppLotteryDraw.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,44 +179,30 @@
 		2626F652FFACD6A48352E86F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5F0DC27F9A5C1236FB97873C /* libPods-AppLotteryDraw.a */,
+				456991C49744B0399AE9CE80 /* libPods-AppLotteryDraw.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		728A72032047A235005666C0 /* Controller */ = {
+		72A5A4EF204923CF001F8C84 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				728A72042047A235005666C0 /* LotteryDrawResultListController.h */,
-				728A72052047A235005666C0 /* LotteryDrawResultListController.m */,
+				72A5A4F02049241F001F8C84 /* ALDWaterfallLayout.h */,
+				72A5A4F12049241F001F8C84 /* ALDWaterfallLayout.m */,
 			);
-			name = Controller;
-			path = AppLotteryDraw/Controller;
-			sourceTree = SOURCE_ROOT;
+			path = Layout;
+			sourceTree = "<group>";
 		};
-		728A72062047A235005666C0 /* Model */ = {
+		72BB134C20490EFF00EE0AC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				728A720F2047A38E005666C0 /* Data.h */,
-				728A72122047A38E005666C0 /* Data.m */,
-				728A72102047A38E005666C0 /* LotteryModel.h */,
-				728A72112047A38E005666C0 /* LotteryModel.m */,
+				72BB134D20490EFF00EE0AC3 /* LotteryDrawResultListCell.h */,
+				72BB134E20490EFF00EE0AC3 /* LotteryDrawResultListCell.m */,
+				72A5A4F62049264A001F8C84 /* ALDWaterfallLayoutCell.h */,
+				72A5A4F72049264A001F8C84 /* ALDWaterfallLayoutCell.m */,
 			);
-			name = Model;
-			path = AppLotteryDraw/Model;
-			sourceTree = SOURCE_ROOT;
-		};
-		728A72072047A235005666C0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				728A72182047A4C9005666C0 /* LotteryDrawResultListCell.h */,
-				728A72192047A4C9005666C0 /* LotteryDrawResultListCell.m */,
-				728A72152047A47D005666C0 /* LotteryDrawResultListView.h */,
-				728A72162047A47D005666C0 /* LotteryDrawResultListView.m */,
-			);
-			name = View;
-			path = AppLotteryDraw/View;
-			sourceTree = SOURCE_ROOT;
+			path = View;
+			sourceTree = "<group>";
 		};
 		B35059106DED15EAC704786D /* Pods */ = {
 			isa = PBXGroup;
@@ -232,21 +234,19 @@
 		CB57DC152046BE2C00F2CFB3 /* AppLotteryDraw */ = {
 			isa = PBXGroup;
 			children = (
+				CB57DC162046BE2C00F2CFB3 /* AppDelegate.h */,
+				CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */,
 				CB62D1912047F6EB00B618B2 /* ALDHome */,
 				CB62D12B2047CC0200B618B2 /* AMDBase */,
 				CB62D1592047D64000B618B2 /* ALDCountry */,
 				CB7487D82048F2EE005890C7 /* ALDLottery */,
-				728A72032047A235005666C0 /* Controller */,
-				728A72062047A235005666C0 /* Model */,
-				728A72072047A235005666C0 /* View */,
-				CB57DC162046BE2C00F2CFB3 /* AppDelegate.h */,
-				CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */,
 				CB62D1852047F59500B618B2 /* OtherResources */,
 				CB62D1A1204807E400B618B2 /* Resources */,
 				CB57DC1F2046BE2C00F2CFB3 /* Assets.xcassets */,
 				CB57DC242046BE2C00F2CFB3 /* Info.plist */,
 				CB57DC252046BE2C00F2CFB3 /* main.m */,
 				CB7487EF20492600005890C7 /* Launch Screen.storyboard */,
+				72A5A4F920492970001F8C84 /* 1.plist */,
 			);
 			path = AppLotteryDraw;
 			sourceTree = "<group>";
@@ -331,8 +331,6 @@
 			isa = PBXGroup;
 			children = (
 				CB62D1812047E97600B618B2 /* Controller */,
-				CB62D1802047E97600B618B2 /* Model */,
-				CB62D17F2047E97600B618B2 /* View */,
 				CB62D17E2047E97500B618B2 /* ViewModel */,
 			);
 			path = ALDCountry;
@@ -345,20 +343,6 @@
 				CB7487D62048EDF4005890C7 /* ALDCountryViewModel.m */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		CB62D17F2047E97600B618B2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CB62D1802047E97600B618B2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		CB62D1812047E97600B618B2 /* Controller */ = {
@@ -407,9 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				CB62D1922047F6EB00B618B2 /* Controller */,
-				CB62D1932047F6EB00B618B2 /* Model */,
 				CB62D1942047F6EB00B618B2 /* View */,
-				CB62D1952047F6EB00B618B2 /* ViewModel */,
 			);
 			path = ALDHome;
 			sourceTree = "<group>";
@@ -433,13 +415,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		CB62D1932047F6EB00B618B2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		CB62D1942047F6EB00B618B2 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,13 +422,6 @@
 				CB62D19A2047F73100B618B2 /* AASMenuCell.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		CB62D1952047F6EB00B618B2 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		CB62D1A1204807E400B618B2 /* Resources */ = {
@@ -493,9 +461,10 @@
 		CB7487D82048F2EE005890C7 /* ALDLottery */ = {
 			isa = PBXGroup;
 			children = (
+				72A5A4EF204923CF001F8C84 /* Layout */,
+				72BB134C20490EFF00EE0AC3 /* View */,
 				CB7487D92048F2EE005890C7 /* Controller */,
 				CB7487DA2048F2EE005890C7 /* Model */,
-				CB7487DB2048F2EE005890C7 /* View */,
 				CB7487DC2048F2EE005890C7 /* ViewModel */,
 			);
 			path = ALDLottery;
@@ -504,6 +473,8 @@
 		CB7487D92048F2EE005890C7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				72BB135A20490F1B00EE0AC3 /* LotteryDrawResultListController.h */,
+				72BB135920490F1B00EE0AC3 /* LotteryDrawResultListController.m */,
 				CB7487E02048F3D0005890C7 /* ALDLofferyListController.h */,
 				CB7487E12048F3D0005890C7 /* ALDLofferyListController.m */,
 			);
@@ -513,22 +484,23 @@
 		CB7487DA2048F2EE005890C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				72BB135520490F1100EE0AC3 /* Data.h */,
+				72BB135620490F1100EE0AC3 /* Data.m */,
+				72BB135320490F1000EE0AC3 /* LotteryModel.h */,
+				72BB135420490F1100EE0AC3 /* LotteryModel.m */,
 				CB7487DD2048F33D005890C7 /* ALDLotteryTypeModel.h */,
 				CB7487DE2048F33D005890C7 /* ALDLotteryTypeModel.m */,
+				72A5A4F32049253E001F8C84 /* ALDImageInfoModel.h */,
+				72A5A4F42049253E001F8C84 /* ALDImageInfoModel.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		CB7487DB2048F2EE005890C7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		CB7487DC2048F2EE005890C7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				72A5A4EC20492075001F8C84 /* LotteryDrawResultListViewModel.h */,
+				72A5A4ED20492075001F8C84 /* LotteryDrawResultListViewModel.m */,
 				CB7487E32048F509005890C7 /* ALDLotteryListVIewModel.h */,
 				CB7487E42048F509005890C7 /* ALDLotteryListVIewModel.m */,
 			);
@@ -598,6 +570,7 @@
 			files = (
 				CB62D1C020480A3D00B618B2 /* menu_myshop@2x.png in Resources */,
 				CB57DC202046BE2C00F2CFB3 /* Assets.xcassets in Resources */,
+				72A5A4FA20492970001F8C84 /* 1.plist in Resources */,
 				CB62D1BC20480A3D00B618B2 /* home_shopset@2x.png in Resources */,
 				CB62D1B820480A3D00B618B2 /* home_client@2x.png in Resources */,
 				CB62D1C220480A3D00B618B2 /* menu_set@2x.png in Resources */,
@@ -606,6 +579,7 @@
 				CB62D1B920480A3D00B618B2 /* home_income@2x.png in Resources */,
 				CB7487EC20490F53005890C7 /* Lottery.bundle in Resources */,
 				CB62D1BA20480A3D00B618B2 /* home_menu@2x.png in Resources */,
+				7280622A204916A40070C294 /* apps_uchat_xuanwonainiu.js in Resources */,
 				CB62D1C520480A3D00B618B2 /* menubackground@2x.png in Resources */,
 				CB62D1BE20480A3D00B618B2 /* loadingimg@2x.png in Resources */,
 				CB62D1BF20480A3D00B618B2 /* menu_help@2x.png in Resources */,
@@ -674,8 +648,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB7487EA20490A9D005890C7 /* main.m in Sources */,
-				CB7487E920490A74005890C7 /* AppDelegate.m in Sources */,
+				CB7487FE204949B1005890C7 /* AppDelegate.m in Sources */,
+				CB7487FD204949AD005890C7 /* AppGuideController.m in Sources */,
+				CB7487FC204949A4005890C7 /* main.m in Sources */,
+				72A5A4F82049264A001F8C84 /* ALDWaterfallLayoutCell.m in Sources */,
 				CB7487E52048F509005890C7 /* ALDLotteryListVIewModel.m in Sources */,
 				CB7487E72048F95B005890C7 /* ALDCountryViewModel.m in Sources */,
 				CB62D1C82048112E00B618B2 /* AASMessageIndexController.m in Sources */,
@@ -684,17 +660,22 @@
 				CB7487DF2048F33D005890C7 /* ALDLotteryTypeModel.m in Sources */,
 				CB62D1562047CC2E00B618B2 /* SSApnsPushService.m in Sources */,
 				CB62D19C2047F73900B618B2 /* AASMenuController.m in Sources */,
+				72A5A4EE20492075001F8C84 /* LotteryDrawResultListViewModel.m in Sources */,
+				7280622B204916AC0070C294 /* GlobalConfigFile.m in Sources */,
 				CB62D19E2047F73E00B618B2 /* AASMenuCell.m in Sources */,
 				CB62D19F2047FD5100B618B2 /* DDMenuController.m in Sources */,
 				CB7487FB20493051005890C7 /* AMDFeedBackViewController.m in Sources */,
-				CB7487F1204929CD005890C7 /* AppGuideController.m in Sources */,
+				72A5A4F22049241F001F8C84 /* ALDWaterfallLayout.m in Sources */,
+				72BB135820490F1100EE0AC3 /* Data.m in Sources */,
 				CB62D1A02047FE1D00B618B2 /* AMDRootViewController+UMStatistic.m in Sources */,
+				72BB135720490F1100EE0AC3 /* LotteryModel.m in Sources */,
 				CB7487E22048F3D0005890C7 /* ALDLofferyListController.m in Sources */,
 				CB7487F820492FDE005890C7 /* AMDNotificationSettingsViewController.m in Sources */,
 				CB7487F520492FB1005890C7 /* ASDSettingController.m in Sources */,
 				CB62D1552047CC2900B618B2 /* SSApnsPushService+Config.m in Sources */,
-				728A72142047A38E005666C0 /* Data.m in Sources */,
-				728A72132047A38E005666C0 /* LotteryModel.m in Sources */,
+				72BB135120490F0000EE0AC3 /* LotteryDrawResultListCell.m in Sources */,
+				72BB135B20490F1B00EE0AC3 /* LotteryDrawResultListController.m in Sources */,
+				72A5A4F52049253E001F8C84 /* ALDImageInfoModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

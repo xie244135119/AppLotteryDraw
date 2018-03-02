@@ -8,7 +8,7 @@
 
 #import "LotteryDrawResultListCell.h"
 #import "Masonry.h"
-
+#import <SSBaseKit/SSBaseKit.h>
 
 @interface LotteryDrawResultListCell()
 {
@@ -38,13 +38,12 @@
     _dateLabel = timeLabel;
 //    timeLabel.text = @"20180222期";
     timeLabel.font = [UIFont systemFontOfSize:14];
-    timeLabel.textColor = ColorWithRGB(51, 51, 51, 1);
-//    timeLabel.layer.borderWidth = 1;
+    timeLabel.textColor = SSColorWithRGB(51, 51, 51, 1);
     [self addSubview:timeLabel];
     [timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@10);
         make.top.equalTo(@15);
-        make.right.equalTo(@-150);
+        make.right.equalTo(@-200);
         make.height.equalTo(@20);
     }];
     
@@ -53,7 +52,7 @@
     _timeLabel = openTime;
     openTime.textAlignment = NSTextAlignmentRight;
     openTime.font = [UIFont systemFontOfSize:12];
-    openTime.textColor = ColorWithRGB(119, 119, 119, 1);
+    openTime.textColor = SSColorWithRGB(119, 119, 119, 1);
 //    openTime.text = @"2018-03-01 15:44";
     [self addSubview:openTime];
     [openTime mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -66,9 +65,9 @@
     //开奖结果背景视图
     UIView *resultBackView = [[UIView alloc]init];
     _resultBackView = resultBackView;
-    resultBackView.backgroundColor = ColorWithRGB(230, 230, 230, 1);
-    resultBackView.layer.borderWidth = .5;
-    resultBackView.layer.borderColor = [UIColor grayColor].CGColor;
+    resultBackView.backgroundColor = SSColorWithRGB(230, 230, 230, 1);
+//    resultBackView.layer.borderWidth = .5;
+//    resultBackView.layer.borderColor = [UIColor grayColor].CGColor;
     [self addSubview:resultBackView];
     [resultBackView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(timeLabel);
@@ -122,14 +121,12 @@
     }
     for (int i = 0; i <sourceArray.count; i++) {
         UIButton *itemBt = [[UIButton alloc]init];
-        itemBt.layer.borderWidth = 1;
         if (i<redCode.count) {
-            itemBt.layer.borderColor = [UIColor redColor].CGColor;
-            [itemBt setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+            itemBt.backgroundColor = [UIColor redColor];
         }else{
-            itemBt.layer.borderColor = [UIColor blueColor].CGColor;
-            [itemBt setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+            itemBt.backgroundColor = [UIColor blueColor];
         }
+        [itemBt setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         itemBt.layer.cornerRadius = 15;
         itemBt.titleLabel.font = [UIFont systemFontOfSize:15];
         [itemBt setTitle:sourceArray[i] forState:UIControlStateNormal];

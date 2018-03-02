@@ -10,4 +10,8 @@
 
 @interface ALDLotteryListVIewModel : AMDBaseViewModel
 
+//数据源
+@property (nonatomic, strong)NSArray *sourceArray;
+
+
 @end

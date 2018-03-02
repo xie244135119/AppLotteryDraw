@@ -13,6 +13,8 @@
 #import "AASMessageIndexController.h"
 #import "ALDLofferyListController.h"
 #import "ALDCountryController.h"
+#import "LotteryDrawResultListController.h"
+#import "ALDLofferyListController.h"
 
 @interface AMDHomeIndexController ()<CustomTableViewDelegate>
 {

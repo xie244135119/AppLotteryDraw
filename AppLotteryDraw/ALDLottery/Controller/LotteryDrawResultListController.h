@@ -6,8 +6,8 @@
 //  Copyright © 2018年 SunSet. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <SSBaseKit/SSBaseKit.h>
 
-@interface LotteryDrawResultListController : UIViewController
+@interface LotteryDrawResultListController : AMDRootViewController
 
 @end

@@ -15,7 +15,8 @@ target 'AppLotteryDraw' do
       # 模块管理化工具
       pod 'SSModuleManager' , '1.3.7'
       
-  
+      #图片缓存类
+      pod 'SDWebImage','4.0.0'
       #极光推送
       pod 'JPush', '3.0.7'
 

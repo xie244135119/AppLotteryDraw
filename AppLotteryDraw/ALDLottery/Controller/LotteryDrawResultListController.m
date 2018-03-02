@@ -7,12 +7,12 @@
 //
 
 #import "LotteryDrawResultListController.h"
-#import "LotteryDrawResultListView.h"
+#import "LotteryDrawResultListViewModel.h"
 #import "LotteryModel.h"
 
 @interface LotteryDrawResultListController ()
 {
-    LotteryDrawResultListView *_view;
+    LotteryDrawResultListViewModel *_view;
 }
 @end
 
@@ -20,27 +20,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.titleView.title = @"开奖结果";
     self.view .backgroundColor = [UIColor whiteColor];
     [self initContentView];
      [self requestApi];
 }
 
 - (void)initContentView{
-    LotteryDrawResultListView *view = [[LotteryDrawResultListView alloc]init];
+    LotteryDrawResultListViewModel *view = [[LotteryDrawResultListViewModel alloc]init];
+    __weak typeof(self) weakself = self;
+    view.reafreshAction = ^(id collection) {
+        [weakself requestApi];
+    };
+    view.loadingAction = ^BOOL(id collection) {
+        return [weakself requestApi];
+    };
     _view = view;
-    [self.view addSubview:view];
+    view.senderController = self;
+    [view prepareView];
 }
 
-//- (void)initContentViewWithSourceModel:(LotteryModel *)model{
-//    self.view.backgroundColor = [UIColor whiteColor];
-//    LotteryDrawResultListView *view = [[LotteryDrawResultListView alloc]init];
-//    _view = view;
-//    view.sourcesModel = model;
-//    [self.view addSubview:view];
-//}
-
-- (void)requestApi{
-    __weak typeof(self) weakself = self;
+- (BOOL)requestApi{
     //初始化一个session
     NSURLSession *session = [NSURLSession sharedSession];
     //通过地址得到一个url
@@ -54,11 +54,11 @@
         
         //回到主线程执行
         dispatch_async(dispatch_get_main_queue(), ^{
-//            [weakself initContentViewWithSourceModel:model];
             _view.sourcesModel = model;
         });
     }];
     [task resume];
+    return YES;
 }
 
 
