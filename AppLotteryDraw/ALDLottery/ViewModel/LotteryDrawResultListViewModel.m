@@ -69,6 +69,7 @@
     LotteryDrawResultListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[LotteryDrawResultListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
      Data *dataModel = _sourcesModel.data[indexPath.row];
 //    cell.itemSourceArray = [dataModel openCode];
