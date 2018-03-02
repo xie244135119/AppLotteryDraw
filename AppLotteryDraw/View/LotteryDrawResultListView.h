@@ -11,7 +11,13 @@
 
 @interface LotteryDrawResultListView : UIView
 
+//数据源
 @property (nonatomic, strong)LotteryModel *sourcesModel;
+
+//开始刷新
+@property (nonatomic, copy)void(^reafreshAction)(id collection);
+//开始加载
+@property (nonatomic, copy)BOOL(^loadingAction)(id collection);
 
 
 @end

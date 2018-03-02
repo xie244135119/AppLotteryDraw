@@ -9,7 +9,7 @@
 #import "LotteryDrawResultListView.h"
 #import "LotteryDrawResultListCell.h"
 #import "Data.h"
-
+#import "AMDMJRefresh.h"
 
 @interface LotteryDrawResultListView()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -38,7 +38,10 @@
     _currentTableView = currentTable;
     currentTable.layer.borderWidth = 1;
     [self addSubview:currentTable];
+    [_currentTableView addHeaderWithTarget:self action:@selector(tableViewDidStartRefreshing:)];
+    [_currentTableView addFooterWithTarget:self action:@selector(tableViewDidStartLoading:)];
 }
+
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,7 +64,7 @@
      Data *dataModel = _sourcesModel.data[indexPath.row];
 //    cell.itemSourceArray = [dataModel openCode];
     [cell setItemCodel:dataModel.redArry blueCode:dataModel.blueArry];
-    cell.dateLabel.text = dataModel.expect;
+    cell.dateLabel.text = [NSString stringWithFormat:@"第%@期",dataModel.expect] ;
     cell.timeLabel.text = [self timestampSwitchTime:dataModel.opentimestamp ];
 //    cell.infoSourceArray = @[@"dfafds"];
     return cell;
@@ -85,5 +88,22 @@
     [_currentTableView reloadData];
 }
 
+#pragma mark - 刷新和加载
+- (void)tableViewDidStartRefreshing:(id)collectionView
+{
+    [_currentTableView headerEndRefreshing];
+    if (_reafreshAction) {
+        _reafreshAction(collectionView);
+    }
+}
+
+- (void)tableViewDidStartLoading:(id)collectionView{
+    [_currentTableView footerEndRefreshing];
+    if (_loadingAction) {
+        if (_loadingAction(collectionView)) {
+            _currentTableView.footerHidden = YES;
+        }
+    }
+}
 
 @end

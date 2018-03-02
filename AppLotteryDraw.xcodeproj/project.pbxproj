@@ -40,6 +40,14 @@
 		728A72552047F7EA005666C0 /* SSJSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 728A72412047F7EA005666C0 /* SSJSONModelError.m */; };
 		728A72562047F7EA005666C0 /* SSJSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 728A72452047F7EA005666C0 /* SSJSONKeyMapper.m */; };
 		728A72572047F7EA005666C0 /* SSJSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 728A72472047F7EA005666C0 /* SSJSONValueTransformer.m */; };
+		72A9BD1F2048EC9900DA1292 /* AMDMJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 72A9BD0F2048EC9800DA1292 /* AMDMJRefresh.bundle */; };
+		72A9BD202048EC9900DA1292 /* AMDMJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A9BD122048EC9800DA1292 /* AMDMJRefreshBaseView.m */; };
+		72A9BD212048EC9900DA1292 /* AMDMJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A9BD142048EC9800DA1292 /* AMDMJRefreshConst.m */; };
+		72A9BD222048EC9900DA1292 /* AMDMJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A9BD162048EC9800DA1292 /* AMDMJRefreshFooterView.m */; };
+		72A9BD232048EC9900DA1292 /* AMDMJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A9BD182048EC9800DA1292 /* AMDMJRefreshHeaderView.m */; };
+		72A9BD242048EC9900DA1292 /* UIScrollView+AMDMJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A9BD1A2048EC9800DA1292 /* UIScrollView+AMDMJExtension.m */; };
+		72A9BD252048EC9900DA1292 /* UIScrollView+AMDMJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A9BD1C2048EC9800DA1292 /* UIScrollView+AMDMJRefresh.m */; };
+		72A9BD262048EC9900DA1292 /* UIView+AMDMJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A9BD1E2048EC9800DA1292 /* UIView+AMDMJExtension.m */; };
 		CB57DC182046BE2C00F2CFB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */; };
 		CB57DC1B2046BE2C00F2CFB3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB57DC1A2046BE2C00F2CFB3 /* ViewController.m */; };
 		CB57DC1E2046BE2C00F2CFB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB57DC1C2046BE2C00F2CFB3 /* Main.storyboard */; };
@@ -120,6 +128,22 @@
 		728A72452047F7EA005666C0 /* SSJSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSJSONKeyMapper.m; sourceTree = "<group>"; };
 		728A72462047F7EA005666C0 /* SSJSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSJSONValueTransformer.h; sourceTree = "<group>"; };
 		728A72472047F7EA005666C0 /* SSJSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSJSONValueTransformer.m; sourceTree = "<group>"; };
+		72A9BD0F2048EC9800DA1292 /* AMDMJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMDMJRefresh.bundle; sourceTree = "<group>"; };
+		72A9BD102048EC9800DA1292 /* AMDMJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDMJRefresh.h; sourceTree = "<group>"; };
+		72A9BD112048EC9800DA1292 /* AMDMJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDMJRefreshBaseView.h; sourceTree = "<group>"; };
+		72A9BD122048EC9800DA1292 /* AMDMJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMDMJRefreshBaseView.m; sourceTree = "<group>"; };
+		72A9BD132048EC9800DA1292 /* AMDMJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDMJRefreshConst.h; sourceTree = "<group>"; };
+		72A9BD142048EC9800DA1292 /* AMDMJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMDMJRefreshConst.m; sourceTree = "<group>"; };
+		72A9BD152048EC9800DA1292 /* AMDMJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDMJRefreshFooterView.h; sourceTree = "<group>"; };
+		72A9BD162048EC9800DA1292 /* AMDMJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMDMJRefreshFooterView.m; sourceTree = "<group>"; };
+		72A9BD172048EC9800DA1292 /* AMDMJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDMJRefreshHeaderView.h; sourceTree = "<group>"; };
+		72A9BD182048EC9800DA1292 /* AMDMJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMDMJRefreshHeaderView.m; sourceTree = "<group>"; };
+		72A9BD192048EC9800DA1292 /* UIScrollView+AMDMJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+AMDMJExtension.h"; sourceTree = "<group>"; };
+		72A9BD1A2048EC9800DA1292 /* UIScrollView+AMDMJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+AMDMJExtension.m"; sourceTree = "<group>"; };
+		72A9BD1B2048EC9800DA1292 /* UIScrollView+AMDMJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+AMDMJRefresh.h"; sourceTree = "<group>"; };
+		72A9BD1C2048EC9800DA1292 /* UIScrollView+AMDMJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+AMDMJRefresh.m"; sourceTree = "<group>"; };
+		72A9BD1D2048EC9800DA1292 /* UIView+AMDMJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AMDMJExtension.h"; sourceTree = "<group>"; };
+		72A9BD1E2048EC9800DA1292 /* UIView+AMDMJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AMDMJExtension.m"; sourceTree = "<group>"; };
 		CB57DC132046BE2C00F2CFB3 /* AppLotteryDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppLotteryDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB57DC162046BE2C00F2CFB3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -306,6 +330,29 @@
 			path = SSJSONModelTransformations;
 			sourceTree = "<group>";
 		};
+		72A9BD0E2048EC9800DA1292 /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				72A9BD0F2048EC9800DA1292 /* AMDMJRefresh.bundle */,
+				72A9BD102048EC9800DA1292 /* AMDMJRefresh.h */,
+				72A9BD112048EC9800DA1292 /* AMDMJRefreshBaseView.h */,
+				72A9BD122048EC9800DA1292 /* AMDMJRefreshBaseView.m */,
+				72A9BD132048EC9800DA1292 /* AMDMJRefreshConst.h */,
+				72A9BD142048EC9800DA1292 /* AMDMJRefreshConst.m */,
+				72A9BD152048EC9800DA1292 /* AMDMJRefreshFooterView.h */,
+				72A9BD162048EC9800DA1292 /* AMDMJRefreshFooterView.m */,
+				72A9BD172048EC9800DA1292 /* AMDMJRefreshHeaderView.h */,
+				72A9BD182048EC9800DA1292 /* AMDMJRefreshHeaderView.m */,
+				72A9BD192048EC9800DA1292 /* UIScrollView+AMDMJExtension.h */,
+				72A9BD1A2048EC9800DA1292 /* UIScrollView+AMDMJExtension.m */,
+				72A9BD1B2048EC9800DA1292 /* UIScrollView+AMDMJRefresh.h */,
+				72A9BD1C2048EC9800DA1292 /* UIScrollView+AMDMJRefresh.m */,
+				72A9BD1D2048EC9800DA1292 /* UIView+AMDMJExtension.h */,
+				72A9BD1E2048EC9800DA1292 /* UIView+AMDMJExtension.m */,
+			);
+			path = MJRefresh;
+			sourceTree = "<group>";
+		};
 		CB57DC0A2046BE2C00F2CFB3 = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +372,7 @@
 		CB57DC152046BE2C00F2CFB3 /* AppLotteryDraw */ = {
 			isa = PBXGroup;
 			children = (
+				72A9BD0E2048EC9800DA1292 /* MJRefresh */,
 				728A72212047F7EA005666C0 /* SSBaseLib */,
 				728A72032047A235005666C0 /* Controller */,
 				728A72062047A235005666C0 /* Model */,
@@ -406,6 +454,7 @@
 				728A72482047F7EA005666C0 /* LICENSE in Resources */,
 				728A71F72047A083005666C0 /* LICENSE in Resources */,
 				728A72022047A084005666C0 /* README.md in Resources */,
+				72A9BD1F2048EC9900DA1292 /* AMDMJRefresh.bundle in Resources */,
 				728A72492047F7EA005666C0 /* README.md in Resources */,
 				CB57DC232046BE2C00F2CFB3 /* LaunchScreen.storyboard in Resources */,
 				CB57DC202046BE2C00F2CFB3 /* Assets.xcassets in Resources */,
@@ -425,6 +474,7 @@
 				728A724D2047F7EA005666C0 /* SSDateTool.m in Sources */,
 				728A72572047F7EA005666C0 /* SSJSONValueTransformer.m in Sources */,
 				728A71FE2047A084005666C0 /* NSArray+MASAdditions.m in Sources */,
+				72A9BD252048EC9900DA1292 /* UIScrollView+AMDMJRefresh.m in Sources */,
 				728A724E2047F7EA005666C0 /* SSErrorLogTool.m in Sources */,
 				728A72082047A235005666C0 /* LotteryDrawResultListController.m in Sources */,
 				728A71F82047A083005666C0 /* MASCompositeConstraint.m in Sources */,
@@ -435,12 +485,16 @@
 				728A72512047F7EA005666C0 /* SSYLEncryptSignTool.m in Sources */,
 				728A724C2047F7EA005666C0 /* NSObject+SSBindValue.m in Sources */,
 				728A72172047A47D005666C0 /* LotteryDrawResultListView.m in Sources */,
+				72A9BD222048EC9900DA1292 /* AMDMJRefreshFooterView.m in Sources */,
+				72A9BD212048EC9900DA1292 /* AMDMJRefreshConst.m in Sources */,
 				CB57DC1B2046BE2C00F2CFB3 /* ViewController.m in Sources */,
 				728A71FA2047A083005666C0 /* MASConstraintMaker.m in Sources */,
 				CB57DC262046BE2C00F2CFB3 /* main.m in Sources */,
+				72A9BD242048EC9900DA1292 /* UIScrollView+AMDMJExtension.m in Sources */,
 				728A721A2047A4C9005666C0 /* LotteryDrawResultListCell.m in Sources */,
 				728A72522047F7EA005666C0 /* UIView+AMD.m in Sources */,
 				728A72552047F7EA005666C0 /* SSJSONModelError.m in Sources */,
+				72A9BD232048EC9900DA1292 /* AMDMJRefreshHeaderView.m in Sources */,
 				728A72542047F7EA005666C0 /* SSJSONModelClassProperty.m in Sources */,
 				CB57DC182046BE2C00F2CFB3 /* AppDelegate.m in Sources */,
 				728A72002047A084005666C0 /* View+MASAdditions.m in Sources */,
@@ -449,9 +503,11 @@
 				728A71FB2047A083005666C0 /* MASLayoutConstraint.m in Sources */,
 				728A724A2047F7EA005666C0 /* AMDBaseModel.m in Sources */,
 				728A72132047A38E005666C0 /* LotteryModel.m in Sources */,
+				72A9BD202048EC9900DA1292 /* AMDMJRefreshBaseView.m in Sources */,
 				728A724B2047F7EA005666C0 /* AMDBaseViewModel.m in Sources */,
 				728A72012047A084005666C0 /* ViewController+MASAdditions.m in Sources */,
 				728A724F2047F7EA005666C0 /* SSImageTool.m in Sources */,
+				72A9BD262048EC9900DA1292 /* UIView+AMDMJExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

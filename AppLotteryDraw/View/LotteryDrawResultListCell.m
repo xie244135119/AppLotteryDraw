@@ -122,14 +122,12 @@
     }
     for (int i = 0; i <sourceArray.count; i++) {
         UIButton *itemBt = [[UIButton alloc]init];
-        itemBt.layer.borderWidth = 1;
         if (i<redCode.count) {
-            itemBt.layer.borderColor = [UIColor redColor].CGColor;
-            [itemBt setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+            itemBt.backgroundColor = [UIColor redColor];
         }else{
-            itemBt.layer.borderColor = [UIColor blueColor].CGColor;
-            [itemBt setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+            itemBt.backgroundColor = [UIColor blueColor];
         }
+        [itemBt setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         itemBt.layer.cornerRadius = 15;
         itemBt.titleLabel.font = [UIFont systemFontOfSize:15];
         [itemBt setTitle:sourceArray[i] forState:UIControlStateNormal];
