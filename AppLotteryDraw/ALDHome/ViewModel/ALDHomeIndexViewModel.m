@@ -102,7 +102,6 @@ static NSString *const kModel = @"kModel";
 - (void)clickLotteryInfoAction:(AMDButton *)sender
 {
     
-    
     //
     LotteryDrawResultListController *resault = [[LotteryDrawResultListController alloc]init];
     [self.senderController.navigationController pushViewController:resault animated:YES];
