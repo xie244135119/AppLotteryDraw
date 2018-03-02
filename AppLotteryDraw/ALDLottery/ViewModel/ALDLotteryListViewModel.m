@@ -72,23 +72,23 @@
         shareBt.imageView.image = [[UIImage alloc]initWithContentsOfFile:SSGetFilePathFromBundle(@"Lottery.bundle",[sourceDic valueForKey:@"imgName"])];
         shareBt.titleLabel.text = [sourceDic valueForKey:@"lotteryName"];
         [shareBt.imageView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.right.offset(-3);
-            make.top.left.offset(3);
+            make.right.offset(-10);
+            make.top.left.offset(10);
             make.height.equalTo(shareBt.imageView.mas_width);
             make.centerX.equalTo(shareBt.mas_centerX);
         }];
         
         [shareBt.titleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.right.offset(0);
-            make.bottom.offset(-3);
+            make.top.equalTo(shareBt.imageView.mas_bottom);
             make.height.offset(20);
         }];
         
         NSInteger row = i/4;
         NSInteger column = i%4;
         [shareBt mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.height.equalTo(@130);
-            
+            make.bottom.equalTo(shareBt.titleLabel.mas_bottom).offset(10);
+
             // 第一个按钮不存在的时候
             if (_firstBt == nil) {
                 make.top.equalTo(@10);
@@ -132,7 +132,7 @@
 
 - (void)clickAction:(AMDButton *)sender{
     NSDictionary *sourceDic =  _sourceArray[sender.tag];
-    LotteryDrawResultListController *VC = [[LotteryDrawResultListController alloc]init];
+    LotteryDrawResultListController *VC = [[LotteryDrawResultListController alloc]initWithTitle:sourceDic[@"lotteryName"] titileViewShow:YES tabBarShow:NO];
     VC.lotteryCode = sourceDic[@"lotteryCode"];
     [_senderController.navigationController pushViewController:VC animated:YES];
 }

@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.titleView.title = @"开奖结果";
+//    self.titleView.title = @"开奖结果";
     self.view .backgroundColor = [UIColor whiteColor];
     [self initContentView];
      [self requestApi];
