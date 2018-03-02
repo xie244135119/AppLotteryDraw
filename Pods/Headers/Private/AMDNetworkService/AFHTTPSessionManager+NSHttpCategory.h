@@ -1,1 +1,0 @@
-../../../AMDNetworkService/AMDNetworkService/Category/AFHTTPSessionManager+NSHttpCategory.h
