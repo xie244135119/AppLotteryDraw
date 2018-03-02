@@ -1,0 +1,1 @@
+../../../SSBaseKit/SSBaseKit/AMDBase/View/AMDCloseControl.h

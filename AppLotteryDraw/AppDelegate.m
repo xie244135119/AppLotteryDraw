@@ -7,9 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "AppGuideController.h"
+#import <AMDNetworkService/NSApi.h>
 
-@interface AppDelegate ()
-
+@interface AppDelegate ()<UIGestureRecognizerDelegate>
+{
+    SSNavigationController *_navController;         //
+}
 @end
 
 @implementation AppDelegate
@@ -17,8 +21,52 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    [self loadAllModules];
+    //
+    [self initRootController];
+    [self.window makeKeyAndVisible];
     return YES;
 }
+
+
+#pragma mark - private api
+// 根视图控制
+- (void)initRootController
+{
+    //
+    AppGuideController *guideVc = [[AppGuideController alloc]init];
+    SSNavigationController *navVc = [[SSNavigationController alloc]initWithRootViewController:guideVc];
+    navVc.navigationBarHidden = YES;
+    navVc.interactivePopGestureRecognizer.delegate = self;
+    navVc.delegate = (id)guideVc;
+    self.window.rootViewController = navVc;
+    _navController = navVc;
+}
+
+
+// 加载所有的模块
+- (void)loadAllModules
+{
+    // 注册通用的host
+    [NSApi registerHostUrl:[NSURL URLWithString:@"http://f.apiplus.net"]];
+}
+
+
+
+#pragma mark - UIGestureRecognizerDelegate
+//
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    if (_navController.viewControllers.count > 2) {
+        return YES;
+    }
+    return NO;
+}
+
+
+#pragma mark
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
