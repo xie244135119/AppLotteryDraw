@@ -13,10 +13,10 @@ target 'AppLotteryDraw' do
     pod 'AMDNetworkService', '~>2.0'
     
     #静态库存储
-    pod 'SSUserDefaults'
+    pod 'SSUserDefaults', '1.3'
     
     #友盟推送
-    pod 'SSBasePlugin'
+    pod 'SSBasePlugin', '1.2.10'
   
       # 模块管理化工具
       pod 'SSModuleManager' , '1.3.7'
