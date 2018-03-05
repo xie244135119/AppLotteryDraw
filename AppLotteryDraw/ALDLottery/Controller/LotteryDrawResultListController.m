@@ -29,6 +29,7 @@
 
 - (void)initContentView{
     LotteryDrawResultListViewModel *view = [[LotteryDrawResultListViewModel alloc]init];
+    view.refreashList = _refreashList;
     view.lotteryInfo = self.lotteryInfo;
     __weak typeof(self) weakself = self;
     view.reafreshAction = ^(id collection) {

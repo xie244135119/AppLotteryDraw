@@ -13,4 +13,7 @@
 //彩票信息
 @property(nonatomic, copy)NSDictionary *lotteryInfo;
 
+//需要刷新上个页面时候用 默认0：添加  1：删除
+@property (nonatomic, copy)void(^refreashList)(NSUInteger status, NSDictionary *infoDic);
+
 @end

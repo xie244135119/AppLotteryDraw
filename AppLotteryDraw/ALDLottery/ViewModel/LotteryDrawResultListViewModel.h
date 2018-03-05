@@ -11,6 +11,9 @@
 
 @interface LotteryDrawResultListViewModel :AMDBaseViewModel
 
+//需要刷新上个页面时候用 默认0：添加  1：删除
+@property (nonatomic, copy)void(^refreashList)(NSUInteger status, NSDictionary *infoDic);
+
 @property (nonatomic, strong)NSDictionary *lotteryInfo;
 //数据源
 //@property (nonatomic, strong)LotteryModel *sourcesModel;

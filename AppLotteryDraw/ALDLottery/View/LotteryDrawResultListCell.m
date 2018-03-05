@@ -119,6 +119,8 @@
     if (blueCode>0) {
         [sourceArray insertObjects:blueCode atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(redCode.count, blueCode.count)]];
     }
+    
+    CGFloat itemWidth = (SScreenWidth-20-(11*10))/10;
     for (int i = 0; i <sourceArray.count; i++) {
         UIButton *itemBt = [[UIButton alloc]init];
         if (i<redCode.count) {
@@ -127,7 +129,7 @@
             itemBt.backgroundColor = [UIColor blueColor];
         }
         [itemBt setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        itemBt.layer.cornerRadius = 15;
+        itemBt.layer.cornerRadius = itemWidth/2;
         itemBt.titleLabel.font = [UIFont systemFontOfSize:15];
         [itemBt setTitle:sourceArray[i] forState:UIControlStateNormal];
         [_currentItemBack addSubview:itemBt];
@@ -135,7 +137,7 @@
         NSInteger row = i/10;
         NSInteger column = i%10;
         [itemBt mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.height.width.equalTo(@30);
+            make.height.width.equalTo(@(itemWidth));
             //当第一个按钮不存在的时候
             if (_firstBt == nil) {
                 make.top.equalTo(@10);
@@ -238,8 +240,9 @@
 
 + (CGFloat)cellHeight:(NSInteger)sourceCount
 {
+    CGFloat itemWidth = (SScreenWidth-20-(11*10))/10;
     //一个圆的宽度
     NSUInteger column=(sourceCount-1)/10;
-    return ((column+1)*40+10)+60;
+    return ((column+1)*(itemWidth+10)+10)+60;
 }
 @end

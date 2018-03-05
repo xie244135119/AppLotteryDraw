@@ -19,7 +19,7 @@
 @interface ALDMyAttentionViewModel()<CustomTableViewDelegate>
 {
     AMDRootViewController *_senderController;
-    NSArray *_sourceArray;
+    NSMutableArray *_sourceArray;
 }
 @end
 
@@ -31,15 +31,17 @@
 }
 
 -(void)initContentView{
+    _sourceArray = [[NSMutableArray alloc]init];
   //搭建表格
     CustomTableView *tableView = [[CustomTableView alloc]initWithType:kCustomTableViewTypeGeneral];
     tableView.delegate = self;
+    _currentTableView = tableView;
     [_senderController.contentView addSubview:tableView];
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.bottom.offset(0);
     }];
     NSArray *model = [self lotteryModel];
-    _sourceArray = model;
+    _sourceArray = model.mutableCopy;
     tableView.sourceData = _sourceArray;
 }
 
@@ -58,9 +60,21 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     LotteryDrawResultListController *resault = [[LotteryDrawResultListController alloc]initWithTitle:_sourceArray[indexPath.row][@"lotteryName"]];
     resault.lotteryInfo = _sourceArray[indexPath.row];
+    resault.refreashList = ^(NSUInteger status, NSDictionary *infoDic) {
+        if (status == 1) {
+            //取消关注
+            [_sourceArray removeObject:infoDic];
+        }else{
+            //添加关注
+            [_sourceArray addObject:infoDic];
+        }
+        [_currentTableView.tableView reloadData];
+    };
     [self.senderController.navigationController pushViewController:resault animated:YES];
     
 }
+
+
 
 #pragma mark - 数据处理
 - (NSArray *)lotteryModel{

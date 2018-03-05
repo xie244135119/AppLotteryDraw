@@ -69,6 +69,7 @@
     rightBt.titleLabel.font = [UIFont systemFontOfSize:16];
     [rightBt addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
     _senderController.titleView.rightViews = @[rightBt];
+
 }
 
 
@@ -109,7 +110,10 @@
 
 - (void)setSourceArray:(NSArray *)sourceArray{
     _sourceArray = sourceArray;
-    [_currentTableView reloadData];
+    //回到主线程执行
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [_currentTableView reloadData];
+    });
 }
 
 //-(void)setSourcesModel:(LotteryModel *)sourcesModel{
@@ -173,6 +177,10 @@
     // 存值
     [defaults setObject:array forKey:SSLevelMyCareKey];
     _currentRightBt.titleLabel.text = @"取消关注";
+    _currentRightBt.tag = 1;
+    if (_refreashList) {
+        _refreashList(0,_lotteryInfo);
+    }
 }
 
 //取消关注
@@ -188,6 +196,10 @@
     [array removeObject:results1[0]];
      [defaults setObject:array forKey:SSLevelMyCareKey];
     _currentRightBt.titleLabel.text = @"添加关注";
+    _currentRightBt.tag = 0;
+    if (_refreashList) {
+        _refreashList(1,results1[0]);
+    }
 }
 
 
