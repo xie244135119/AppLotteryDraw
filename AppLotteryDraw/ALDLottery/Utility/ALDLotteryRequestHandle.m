@@ -11,6 +11,7 @@
 #import "GlobalVar.h"
 #import <SSBaseLib/SSDateTool.h>
 #import "LotteryModel.h"
+#import <AMDNetworkService/NSApi.h>
 
 @implementation ALDLotteryRequestHandle
 
@@ -69,7 +70,25 @@
         completion(list);
         return;
     }
-    
+//    [NSApi registerHostUrl:[NSURL URLWithString:@"http://f.apiplus.net"]];
+//    NSString *urlpath = [NSString stringWithFormat:@"/%@-20.json", lotteryCode];
+//    NSHttpConfiguration *config = [[NSHttpConfiguration alloc]init];
+//    config.animated = YES;
+//    NSHttpRequest *request = [[NSHttpRequest alloc]initWithConfiguration:config] ;
+//    request.urlPath =urlpath;
+//    request.type = NSRequestGET;
+//    request.completion = ^(id responseObject, NSError *error) {
+//        LotteryModel *model = [[LotteryModel alloc]initWithDictionary:responseObject];
+//        // 更新本地时间戳
+//        [ALDLotteryRequestHandle updateRequestTimestamp:lotteryCode];
+//        //
+//        [ALDLotteryRequestHandle updateLateList:model.data lotteryCode:lotteryCode];
+//        if (completion) {
+//            completion(model.data);
+//        }
+//    };
+//    [[NSApi shareInstance]sendReq:request];
+//    return;
     // 发起请求
     //初始化一个session
     NSURLSession *session = [NSURLSession sharedSession];
@@ -84,7 +103,8 @@
         
         // 更新本地时间戳
         [ALDLotteryRequestHandle updateRequestTimestamp:lotteryCode];
-        
+        //
+        [ALDLotteryRequestHandle updateLateList:model.data lotteryCode:lotteryCode];
         if (completion) {
             completion(model.data);
         }

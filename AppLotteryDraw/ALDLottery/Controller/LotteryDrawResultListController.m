@@ -9,10 +9,11 @@
 #import "LotteryDrawResultListController.h"
 #import "LotteryDrawResultListViewModel.h"
 #import "LotteryModel.h"
+#import "ALDLotteryRequestHandle.h"
 
 @interface LotteryDrawResultListController ()
 {
-    LotteryDrawResultListViewModel *_view;
+   __block LotteryDrawResultListViewModel *_view;
 }
 @end
 
@@ -42,6 +43,10 @@
 }
 
 - (BOOL)requestApi{
+    [[ALDLotteryRequestHandle shareInstance] getListWithLotteryCode:self.lotteryInfo[@"lotteryCode"] completion:^(NSArray<Data> *list) {
+        _view.sourceArray = list;
+    }];
+    return YES;
     //初始化一个session
     NSURLSession *session = [NSURLSession sharedSession];
     //通过地址得到一个url
@@ -55,7 +60,7 @@
         
         //回到主线程执行
         dispatch_async(dispatch_get_main_queue(), ^{
-            _view.sourcesModel = model;
+//            _view.sourcesModel = model;
         });
     }];
     [task resume];

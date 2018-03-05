@@ -244,13 +244,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CB184BF02049936600AAA6E6 /* ALDWeb */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ALDWeb;
-			sourceTree = "<group>";
-		};
 		CB184BFC204D1E3000AAA6E6 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,7 +277,6 @@
 				CB184BF4204CDD2300AAA6E6 /* AppLotteryDraw.entitlements */,
 				CB57DC162046BE2C00F2CFB3 /* AppDelegate.h */,
 				CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */,
-				CB184BF02049936600AAA6E6 /* ALDWeb */,
 				CB62D1912047F6EB00B618B2 /* ALDHome */,
 				CB62D12B2047CC0200B618B2 /* AMDBase */,
 				CB62D1592047D64000B618B2 /* ALDCountry */,

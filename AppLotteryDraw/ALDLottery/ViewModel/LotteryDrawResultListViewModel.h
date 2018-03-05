@@ -13,7 +13,8 @@
 
 @property (nonatomic, strong)NSDictionary *lotteryInfo;
 //数据源
-@property (nonatomic, strong)LotteryModel *sourcesModel;
+//@property (nonatomic, strong)LotteryModel *sourcesModel;
+@property (nonatomic, strong)NSArray *sourceArray;
 
 //开始刷新
 @property (nonatomic, copy)void(^reafreshAction)(id collection);
