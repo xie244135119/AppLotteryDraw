@@ -104,7 +104,7 @@ static NSString *const kModel = @"kModel";
     NSDictionary *dict = [sender getBindValueForKey:kModel];
     //
     LotteryDrawResultListController *resault = [[LotteryDrawResultListController alloc]initWithTitle:dict[@"lotteryName"]];
-    resault.lotteryCode = dict[@"lotteryCode"];
+    resault.lotteryInfo = dict;
     [self.senderController.navigationController pushViewController:resault animated:YES];
 }
 

@@ -1,7 +1,7 @@
 //
 //  ALDLofferyListController.h
 //  AppLotteryDraw
-//
+// 彩票列表
 //  Created by SunSet on 2018/3/2.
 //  Copyright © 2018年 SunSet. All rights reserved.
 //

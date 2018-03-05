@@ -145,7 +145,7 @@
 - (void)clickAction:(AMDButton *)sender{
     NSDictionary *sourceDic =  _sourceArray[sender.tag];
     LotteryDrawResultListController *VC = [[LotteryDrawResultListController alloc]initWithTitle:sourceDic[@"lotteryName"] titileViewShow:YES tabBarShow:NO];
-    VC.lotteryCode = sourceDic[@"lotteryCode"];
+    VC.lotteryInfo = sourceDic;
     [_senderController.navigationController pushViewController:VC animated:YES];
 }
 @end

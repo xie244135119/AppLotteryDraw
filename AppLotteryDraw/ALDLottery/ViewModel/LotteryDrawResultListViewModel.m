@@ -13,6 +13,10 @@
 #import <SSBaseKit/SSBaseKit.h>
 #import <SSBaseLib/SSBaseLib.h>
 #import <Masonry/Masonry.h>
+#import <SSUserDefaults/SSUserDefaults.h>
+#import "GlobalVar.h"
+
+
 //屏幕宽度
 //#define APPWidth [UIScreen mainScreen].bounds.size.width
 //#define APPHeight [UIScreen mainScreen].bounds.size.height
@@ -57,7 +61,12 @@
 
 //初始化导航item
 - (void)initNavigationBarItem{
-    
+    AMDButton *rightBt = [[AMDButton alloc]initWithFrame:CGRectMake(SScreenWidth-100-5, 2, 100, 40)];
+    rightBt.titleLabel.text = @"添加关注";
+    rightBt.titleLabel.textAlignment = NSTextAlignmentRight;
+    rightBt.titleLabel.font = [UIFont systemFontOfSize:16];
+    [rightBt addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
+    _senderController.titleView.rightViews = @[rightBt];
 }
 
 
@@ -118,4 +127,33 @@
     }
 }
 
+
+#pragma mark - 按钮事件
+- (void)clickAction:(AMDButton *)sender{
+    __weak typeof(self) weakself = self;
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"是否添加到关注" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [weakself saveObject];
+    }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:confirmAction];
+    [alert addAction:cancelAction];
+    [_senderController presentViewController:alert animated:YES completion:nil];
+}
+
+
+- (void)saveObject{
+    SSUserDefaults *defaults = [SSUserDefaults defaultsWithType:SSUserDefaultsLevelDb];
+    NSArray *model = [defaults objectForKey:SSLevelMyCareKey];
+    NSMutableArray *array = [[NSMutableArray alloc]init];
+    if (model != nil) {
+        [array addObjectsFromArray:model];
+    }
+//    NSDictionary *oldmodeldict = [defaults objectForKey:SSLevelMyCareKey];
+//    NSMutableDictionary *dict = [[NSMutableDictionary alloc]initWithDictionary:oldmodeldict];
+//    [dict setObject:_lotteryInfo forKey:@"lotteryinfo"];
+    [array addObject:_lotteryInfo];
+    // 存值
+    [defaults setObject:array forKey:SSLevelMyCareKey];
+}
 @end

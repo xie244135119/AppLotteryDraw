@@ -11,6 +11,7 @@
 
 @interface LotteryDrawResultListViewModel :AMDBaseViewModel
 
+@property (nonatomic, strong)NSDictionary *lotteryInfo;
 //数据源
 @property (nonatomic, strong)LotteryModel *sourcesModel;
 

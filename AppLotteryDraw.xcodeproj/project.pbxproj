@@ -10,6 +10,10 @@
 		0BE044220A69ED9281798DE0 /* libPods-AppLotteryDraw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 456991C49744B0399AE9CE80 /* libPods-AppLotteryDraw.a */; };
 		7280622A204916A40070C294 /* apps_uchat_xuanwonainiu.js in Resources */ = {isa = PBXBuildFile; fileRef = CB62D13A2047CC0200B618B2 /* apps_uchat_xuanwonainiu.js */; };
 		7280622B204916AC0070C294 /* GlobalConfigFile.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1452047CC0200B618B2 /* GlobalConfigFile.m */; };
+		72932882204CF5D000569FEA /* custom.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 72932881204CF5D000569FEA /* custom.bundle */; };
+		72932885204D0E5000569FEA /* ALDMyAttentionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72932884204D0E5000569FEA /* ALDMyAttentionController.m */; };
+		72932888204D0E9F00569FEA /* ALDMyAttentionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72932887204D0E9F00569FEA /* ALDMyAttentionViewModel.m */; };
+		7293288B204D19B000569FEA /* ALDMyAttentionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7293288A204D19B000569FEA /* ALDMyAttentionCell.m */; };
 		72A5A4EE20492075001F8C84 /* LotteryDrawResultListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A5A4ED20492075001F8C84 /* LotteryDrawResultListViewModel.m */; };
 		72A5A4F22049241F001F8C84 /* ALDWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A5A4F12049241F001F8C84 /* ALDWaterfallLayout.m */; };
 		72A5A4F52049253E001F8C84 /* ALDImageInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A5A4F42049253E001F8C84 /* ALDImageInfoModel.m */; };
@@ -70,6 +74,13 @@
 		0142D65FD1C0B123102BC25C /* Pods-AppLotteryDraw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLotteryDraw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppLotteryDraw/Pods-AppLotteryDraw.debug.xcconfig"; sourceTree = "<group>"; };
 		1D3B304FAB1AFD7CFA826C15 /* Pods-AppLotteryDraw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLotteryDraw.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppLotteryDraw/Pods-AppLotteryDraw.release.xcconfig"; sourceTree = "<group>"; };
 		456991C49744B0399AE9CE80 /* libPods-AppLotteryDraw.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppLotteryDraw.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72932881204CF5D000569FEA /* custom.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = custom.bundle; sourceTree = "<group>"; };
+		72932883204D0E5000569FEA /* ALDMyAttentionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDMyAttentionController.h; sourceTree = "<group>"; };
+		72932884204D0E5000569FEA /* ALDMyAttentionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDMyAttentionController.m; sourceTree = "<group>"; };
+		72932886204D0E9F00569FEA /* ALDMyAttentionViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDMyAttentionViewModel.h; sourceTree = "<group>"; };
+		72932887204D0E9F00569FEA /* ALDMyAttentionViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDMyAttentionViewModel.m; sourceTree = "<group>"; };
+		72932889204D19B000569FEA /* ALDMyAttentionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDMyAttentionCell.h; sourceTree = "<group>"; };
+		7293288A204D19B000569FEA /* ALDMyAttentionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDMyAttentionCell.m; sourceTree = "<group>"; };
 		72A5A4EC20492075001F8C84 /* LotteryDrawResultListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryDrawResultListViewModel.h; sourceTree = "<group>"; };
 		72A5A4ED20492075001F8C84 /* LotteryDrawResultListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryDrawResultListViewModel.m; sourceTree = "<group>"; };
 		72A5A4F02049241F001F8C84 /* ALDWaterfallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDWaterfallLayout.h; sourceTree = "<group>"; };
@@ -215,6 +226,8 @@
 				72BB134E20490EFF00EE0AC3 /* LotteryDrawResultListCell.m */,
 				72A5A4F62049264A001F8C84 /* ALDWaterfallLayoutCell.h */,
 				72A5A4F72049264A001F8C84 /* ALDWaterfallLayoutCell.m */,
+				72932889204D19B000569FEA /* ALDMyAttentionCell.h */,
+				7293288A204D19B000569FEA /* ALDMyAttentionCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -462,6 +475,7 @@
 				CB7487EB20490F53005890C7 /* Lottery.bundle */,
 				CB7487ED204912BF005890C7 /* LotteryType.plist */,
 				CB748808204962E4005890C7 /* Lotterys.plist */,
+				72932881204CF5D000569FEA /* custom.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -508,6 +522,8 @@
 				72BB135920490F1B00EE0AC3 /* LotteryDrawResultListController.m */,
 				CB7487E02048F3D0005890C7 /* ALDLofferyListController.h */,
 				CB7487E12048F3D0005890C7 /* ALDLofferyListController.m */,
+				72932883204D0E5000569FEA /* ALDMyAttentionController.h */,
+				72932884204D0E5000569FEA /* ALDMyAttentionController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -534,6 +550,8 @@
 				72A5A4ED20492075001F8C84 /* LotteryDrawResultListViewModel.m */,
 				CB7487E32048F509005890C7 /* ALDLotteryListViewModel.h */,
 				CB7487E42048F509005890C7 /* ALDLotteryListViewModel.m */,
+				72932886204D0E9F00569FEA /* ALDMyAttentionViewModel.h */,
+				72932887204D0E9F00569FEA /* ALDMyAttentionViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -623,6 +641,7 @@
 				CB7487EE204912BF005890C7 /* LotteryType.plist in Resources */,
 				CB62D1CA204812A800B618B2 /* home_message@2x.png in Resources */,
 				CB62D1B920480A3D00B618B2 /* home_income@2x.png in Resources */,
+				72932882204CF5D000569FEA /* custom.bundle in Resources */,
 				CB7487EC20490F53005890C7 /* Lottery.bundle in Resources */,
 				CB62D1BA20480A3D00B618B2 /* home_menu@2x.png in Resources */,
 				7280622A204916A40070C294 /* apps_uchat_xuanwonainiu.js in Resources */,
@@ -700,6 +719,8 @@
 				CB7487FD204949AD005890C7 /* AppGuideController.m in Sources */,
 				CB7487FC204949A4005890C7 /* main.m in Sources */,
 				72A5A4F82049264A001F8C84 /* ALDWaterfallLayoutCell.m in Sources */,
+				7293288B204D19B000569FEA /* ALDMyAttentionCell.m in Sources */,
+				72932888204D0E9F00569FEA /* ALDMyAttentionViewModel.m in Sources */,
 				CB7487E52048F509005890C7 /* ALDLotteryListViewModel.m in Sources */,
 				CB7487E72048F95B005890C7 /* ALDCountryViewModel.m in Sources */,
 				CB74880520495B8D005890C7 /* AYESupplyOfGoodsCell.m in Sources */,
@@ -717,6 +738,7 @@
 				CB62D19F2047FD5100B618B2 /* DDMenuController.m in Sources */,
 				CB7487FB20493051005890C7 /* AMDFeedBackViewController.m in Sources */,
 				72A5A4F22049241F001F8C84 /* ALDWaterfallLayout.m in Sources */,
+				72932885204D0E5000569FEA /* ALDMyAttentionController.m in Sources */,
 				72BB135820490F1100EE0AC3 /* Data.m in Sources */,
 				CB62D1A02047FE1D00B618B2 /* AMDRootViewController+UMStatistic.m in Sources */,
 				72BB135720490F1100EE0AC3 /* LotteryModel.m in Sources */,

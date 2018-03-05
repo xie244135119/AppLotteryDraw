@@ -11,6 +11,7 @@
 #import "AASMenuCell.h"
 #import <Masonry/Masonry.h>
 #import "ASDSettingController.h"
+#import "ALDMyAttentionController.h"
 //#import "AASTool.h"
 //#import "AASHelpCenterController.h"
 //#import "AASSetIndexController.h"
@@ -185,6 +186,8 @@
     [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
     switch (indexPath.row+1) {
         case 1:{//我的微店
+            ALDMyAttentionController *VC = [[ALDMyAttentionController alloc]init];
+            [self.menuVC.navigationController pushViewController:VC animated:YES];
             //
 //            [self.menuVC showRootController:YES];
             NSLog(@" 咱不开放 ");

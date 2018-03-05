@@ -28,6 +28,7 @@
 
 - (void)initContentView{
     LotteryDrawResultListViewModel *view = [[LotteryDrawResultListViewModel alloc]init];
+    view.lotteryInfo = self.lotteryInfo;
     __weak typeof(self) weakself = self;
     view.reafreshAction = ^(id collection) {
         [weakself requestApi];
@@ -44,7 +45,7 @@
     //初始化一个session
     NSURLSession *session = [NSURLSession sharedSession];
     //通过地址得到一个url
-    NSString *urlStr = [NSString stringWithFormat:@"http://f.apiplus.net/%@.json",self.lotteryCode];
+    NSString *urlStr = [NSString stringWithFormat:@"http://f.apiplus.net/%@.json",self.lotteryInfo[@"lotteryCode"]];
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLSessionTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data

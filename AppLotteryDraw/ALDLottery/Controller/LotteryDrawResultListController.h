@@ -10,7 +10,7 @@
 
 @interface LotteryDrawResultListController : AMDRootViewController
 
-//彩票code
-@property(nonatomic, copy)NSString *lotteryCode;
+//彩票信息
+@property(nonatomic, copy)NSDictionary *lotteryInfo;
 
 @end
