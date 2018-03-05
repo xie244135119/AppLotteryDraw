@@ -52,6 +52,8 @@
 //导航视图
 - (void)initNavView:(UIView *)parentView
 {
+    self.titleView.title = @"开彩";
+    
     //左侧菜单
     UIButton *menu = [UIButton buttonWithType:UIButtonTypeCustom];
     [menu setFrame:CGRectMake(10,20, 40, 40)];

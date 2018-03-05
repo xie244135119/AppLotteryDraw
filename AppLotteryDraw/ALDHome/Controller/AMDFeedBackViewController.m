@@ -144,7 +144,7 @@
 
 #pragma mark - 点击事件
 -(void)clickBT:(AMDButton *)sender{
-//    [self.contentTextView resignFirstResponder];
+    [self.contentTextView resignFirstResponder];
 //   AMDSettingModule *manager = [AMDSettingModule module];
     switch (sender.tag) {
 //        case 1://添加图片
@@ -171,8 +171,12 @@
             
             sleep(1);
             
+            __weak typeof(self) weakself = self;
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"感谢您的反馈 我们将迅速处理" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [weakself.navigationController popViewControllerAnimated:YES];
+            }];
+            
             [alertController addAction:action];
             [self presentViewController:alertController animated:YES completion:nil];
 //            if (_currentImageCount == 0&&self.contentTextView.text.length == 0) {
