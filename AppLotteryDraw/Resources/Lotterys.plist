@@ -12,13 +12,25 @@
 		<key>name</key>
 		<string>境内高频彩列表</string>
 		<key>type</key>
-		<string>gaopin</string>
+		<string>jingneigaopin</string>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>境内低频彩列表</string>
 		<key>type</key>
-		<string>dipin</string>
+		<string>jingneidipin</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>境外高频彩列表</string>
+		<key>type</key>
+		<string>jingwaigaopin</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>境外低频彩列表</string>
+		<key>type</key>
+		<string>jingwaidipin</string>
 	</dict>
 </array>
 </plist>

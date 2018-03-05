@@ -26,6 +26,8 @@
 		72BB135B20490F1B00EE0AC3 /* LotteryDrawResultListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BB135920490F1B00EE0AC3 /* LotteryDrawResultListController.m */; };
 		CB184BF5204CDD9400AAA6E6 /* SSUMMobService+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1362047CC0200B618B2 /* SSUMMobService+Config.m */; };
 		CB184BFB204CE74400AAA6E6 /* GlobalVar.m in Sources */ = {isa = PBXBuildFile; fileRef = CB184BFA204CE74400AAA6E6 /* GlobalVar.m */; };
+		CB184BFF204D1E4700AAA6E6 /* ALDLotteryRequestHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = CB184BFE204D1E4700AAA6E6 /* ALDLotteryRequestHandle.m */; };
+		CB184C01204D31CE00AAA6E6 /* nodata_space@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB184C00204D304700AAA6E6 /* nodata_space@2x.png */; };
 		CB57DC202046BE2C00F2CFB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB57DC1F2046BE2C00F2CFB3 /* Assets.xcassets */; };
 		CB62D1552047CC2900B618B2 /* SSApnsPushService+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1302047CC0200B618B2 /* SSApnsPushService+Config.m */; };
 		CB62D1562047CC2E00B618B2 /* SSApnsPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1322047CC0200B618B2 /* SSApnsPushService.m */; };
@@ -102,6 +104,9 @@
 		CB184BF4204CDD2300AAA6E6 /* AppLotteryDraw.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppLotteryDraw.entitlements; sourceTree = "<group>"; };
 		CB184BF9204CE74400AAA6E6 /* GlobalVar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalVar.h; sourceTree = "<group>"; };
 		CB184BFA204CE74400AAA6E6 /* GlobalVar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalVar.m; sourceTree = "<group>"; };
+		CB184BFD204D1E4700AAA6E6 /* ALDLotteryRequestHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDLotteryRequestHandle.h; sourceTree = "<group>"; };
+		CB184BFE204D1E4700AAA6E6 /* ALDLotteryRequestHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDLotteryRequestHandle.m; sourceTree = "<group>"; };
+		CB184C00204D304700AAA6E6 /* nodata_space@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nodata_space@2x.png"; sourceTree = "<group>"; };
 		CB57DC132046BE2C00F2CFB3 /* AppLotteryDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppLotteryDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB57DC162046BE2C00F2CFB3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,8 +119,6 @@
 		CB62D1302047CC0200B618B2 /* SSApnsPushService+Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SSApnsPushService+Config.m"; sourceTree = "<group>"; };
 		CB62D1312047CC0200B618B2 /* SSApnsPushService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSApnsPushService.h; sourceTree = "<group>"; };
 		CB62D1322047CC0200B618B2 /* SSApnsPushService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSApnsPushService.m; sourceTree = "<group>"; };
-		CB62D1332047CC0200B618B2 /* SSEvokeAppService+Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SSEvokeAppService+Config.h"; sourceTree = "<group>"; };
-		CB62D1342047CC0200B618B2 /* SSEvokeAppService+Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SSEvokeAppService+Config.m"; sourceTree = "<group>"; };
 		CB62D1352047CC0200B618B2 /* SSUMMobService+Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SSUMMobService+Config.h"; sourceTree = "<group>"; };
 		CB62D1362047CC0200B618B2 /* SSUMMobService+Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SSUMMobService+Config.m"; sourceTree = "<group>"; };
 		CB62D1382047CC0200B618B2 /* AMDAnimationWebView+UserAgent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AMDAnimationWebView+UserAgent.h"; sourceTree = "<group>"; };
@@ -248,6 +251,15 @@
 			path = ALDWeb;
 			sourceTree = "<group>";
 		};
+		CB184BFC204D1E3000AAA6E6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CB184BFD204D1E4700AAA6E6 /* ALDLotteryRequestHandle.h */,
+				CB184BFE204D1E4700AAA6E6 /* ALDLotteryRequestHandle.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		CB57DC0A2046BE2C00F2CFB3 = {
 			isa = PBXGroup;
 			children = (
@@ -310,8 +322,6 @@
 				CB62D1302047CC0200B618B2 /* SSApnsPushService+Config.m */,
 				CB62D1312047CC0200B618B2 /* SSApnsPushService.h */,
 				CB62D1322047CC0200B618B2 /* SSApnsPushService.m */,
-				CB62D1332047CC0200B618B2 /* SSEvokeAppService+Config.h */,
-				CB62D1342047CC0200B618B2 /* SSEvokeAppService+Config.m */,
 				CB62D1352047CC0200B618B2 /* SSUMMobService+Config.h */,
 				CB62D1362047CC0200B618B2 /* SSUMMobService+Config.m */,
 			);
@@ -470,6 +480,7 @@
 		CB62D1A1204807E400B618B2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CB184C00204D304700AAA6E6 /* nodata_space@2x.png */,
 				CB7487F220492C83005890C7 /* Hiragino Sans GB W3.otf */,
 				CB62D1A2204807E400B618B2 /* Index */,
 				CB7487EB20490F53005890C7 /* Lottery.bundle */,
@@ -506,6 +517,7 @@
 		CB7487D82048F2EE005890C7 /* ALDLottery */ = {
 			isa = PBXGroup;
 			children = (
+				CB184BFC204D1E3000AAA6E6 /* Utility */,
 				72A5A4EF204923CF001F8C84 /* Layout */,
 				72BB134C20490EFF00EE0AC3 /* View */,
 				CB7487D92048F2EE005890C7 /* Controller */,
@@ -649,6 +661,7 @@
 				CB62D1BE20480A3D00B618B2 /* loadingimg@2x.png in Resources */,
 				CB62D1BF20480A3D00B618B2 /* menu_help@2x.png in Resources */,
 				CB62D1C120480A3D00B618B2 /* menu_recommend@2x.png in Resources */,
+				CB184C01204D31CE00AAA6E6 /* nodata_space@2x.png in Resources */,
 				CB62D1C420480A3D00B618B2 /* menu_store@2x.png in Resources */,
 				CB62D1BB20480A3D00B618B2 /* home_order-form@2x.png in Resources */,
 				CB748809204962E4005890C7 /* Lotterys.plist in Resources */,
@@ -725,6 +738,7 @@
 				CB7487E72048F95B005890C7 /* ALDCountryViewModel.m in Sources */,
 				CB74880520495B8D005890C7 /* AYESupplyOfGoodsCell.m in Sources */,
 				CB62D1C82048112E00B618B2 /* AASMessageIndexController.m in Sources */,
+				CB184BFF204D1E4700AAA6E6 /* ALDLotteryRequestHandle.m in Sources */,
 				CB62D19D2047F73B00B618B2 /* AMDHomeIndexController.m in Sources */,
 				CB7487E62048F95A005890C7 /* ALDCountryController.m in Sources */,
 				CB7487DF2048F33D005890C7 /* ALDLotteryTypeModel.m in Sources */,

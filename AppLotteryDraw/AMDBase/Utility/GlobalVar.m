@@ -10,3 +10,7 @@
 
 //
 NSString *const SSLevelMyCareKey = @"SSLevelMyCareKey";
+
+NSString *const SSLevelRequestTimestampKey = @"SSLevelRequestTimestampKey";
+
+NSString *const SSLLevelLotteryInfoKey = @"SSLLevelLotteryInfoKey";

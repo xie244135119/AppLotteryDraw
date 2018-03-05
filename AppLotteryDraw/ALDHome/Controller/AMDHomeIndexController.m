@@ -37,7 +37,7 @@
     
     //
 //    [self initTableView];
-    [self initNavView:self.titleView];
+    [self initNavView];
     [self loadDict];
 }
 
@@ -50,15 +50,18 @@
 #pragma mark - 视图加载
 //
 //导航视图
-- (void)initNavView:(UIView *)parentView
+- (void)initNavView
 {
+    self.titleView.title = @"开彩";
+    
     //左侧菜单
     UIButton *menu = [UIButton buttonWithType:UIButtonTypeCustom];
     [menu setFrame:CGRectMake(10,20, 40, 40)];
     [menu setBackgroundImage:[UIImage imageNamed:@"home_menu.png"] forState:UIControlStateNormal];
     [menu addTarget:self action:@selector(clickMenuAction:) forControlEvents:UIControlEventTouchUpInside];
     menu.tag = 1;
-    [parentView addSubview:menu];
+//    [parentView addSubview:menu];
+    self.titleView.leftViews = @[menu];
     
     //消息
     UIButton *messagebt = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -66,7 +69,8 @@
     [messagebt setFrame:CGRectMake(SScreenWidth-10-40, 20, 40, 40)];
     [messagebt addTarget:self action:@selector(clickMessageAction:) forControlEvents:UIControlEventTouchUpInside];
     messagebt.tag = 2;
-    [parentView addSubview:messagebt];
+//    [parentView addSubview:messagebt];
+    self.titleView.rightViews = @[menu];
 }
 
 //

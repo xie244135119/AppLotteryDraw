@@ -10,6 +10,8 @@
 //static NSString *const kMessageIndexCellIder = @"messageindexcell";
 
 #import "AASMessageIndexController.h"
+#import <SSBaseKit/AMDNoDataView.h>
+#import <Masonry/Masonry.h>
 //#import "AASMessageTableController.h"
 //#import "AASBoardTabController.h"
 //#import "AASMessageChoiceView.h"
@@ -25,6 +27,7 @@
 }
 //@property(nonatomic,strong) AASMessageTableController *messageTableVC;      //消息tab
 //@property(nonatomic,strong) AASBoardTabController *boardTableVC;            //公告tab
+@property(nonatomic, weak) AMDNoDataView *noDataView;
 @end
 
 @implementation AASMessageIndexController
@@ -49,7 +52,7 @@
 {
     [super viewDidLoad];
     
-//    [self initContentView];
+    [self initContentView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,6 +66,33 @@
     [super viewWillAppear:animated];
 //    [self invokeRequest];
 }
+
+
+#pragma mark - 视图加载
+//
+- (void)initContentView
+{
+    self.noDataView.hidden = NO;
+}
+
+
+- (AMDNoDataView *)noDataView
+{
+    if (!_noDataView) {
+        AMDNoDataView *v = [[AMDNoDataView alloc] init];
+        _noDataView = v;
+        _noDataView.titleLabel.text = NSLocalizedString(@"暂无消息", @"") ;
+        _noDataView.nodataImageView.image = [UIImage imageNamed:@"nodata_space.png"];
+        //        _noDataView.nodataType = AMDNoDataViewTypeDynamic;
+        _noDataView.hidden = YES;
+        [self.contentView addSubview:_noDataView];
+        [_noDataView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.insets(UIEdgeInsetsMake(0, 0, 0, 0));
+        }];
+    }
+    return _noDataView;
+}
+
 
 
 #pragma mark - ******************* 初始化View *******************
