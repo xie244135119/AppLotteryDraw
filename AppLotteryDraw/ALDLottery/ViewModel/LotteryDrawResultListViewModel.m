@@ -36,8 +36,11 @@
 -(void)prepareView{
     _senderController = (AMDRootViewController *)self.senderController;
     [self initTableView];
+    [self initNavigationBarItem];
 }
 
+
+//初始化表格
 - (void)initTableView{
     UITableView *currentTable = [[UITableView alloc]init];
     currentTable.delegate = self;
@@ -47,8 +50,14 @@
     [currentTable mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.left.right.offset(0);
     }];
-    [_currentTableView addHeaderWithTarget:self action:@selector(tableViewDidStartRefreshing:)];
-    [_currentTableView addFooterWithTarget:self action:@selector(tableViewDidStartLoading:)];
+//    [_currentTableView addHeaderWithTarget:self action:@selector(tableViewDidStartRefreshing:)];
+//    [_currentTableView addFooterWithTarget:self action:@selector(tableViewDidStartLoading:)];
+}
+
+
+//初始化导航item
+- (void)initNavigationBarItem{
+    
 }
 
 
