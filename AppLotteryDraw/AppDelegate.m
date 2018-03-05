@@ -29,7 +29,7 @@
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     
     // 测试
-    [self performSelector:@selector(performWebSite) withObject:nil afterDelay:10];
+//    [self performSelector:@selector(performWebSite) withObject:nil afterDelay:10];
     
     [self loadAllModules];
     //
