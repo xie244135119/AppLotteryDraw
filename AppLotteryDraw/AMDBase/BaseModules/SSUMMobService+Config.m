@@ -7,16 +7,16 @@
 //
 
 #import "SSUMMobService+Config.h"
-#import "MultiProjectManager.h"
 
 @implementation SSUMMobService (Config)
 
 
 #pragma mark - SSMobConfig
-//
+// 友盟key
 - (NSString *)mobAppKey
 {
-    return [[MultiProjectManager globalConfigFile] uMengReleaseAppKey];
+    // 彩票开奖平台
+    return @"5a9caa1bf29d9843d20001ba";
 }
 
 

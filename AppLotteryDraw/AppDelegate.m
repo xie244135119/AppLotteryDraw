@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "AppGuideController.h"
 #import <AMDNetworkService/NSApi.h>
+#import <SSBaseKit/AMDWebViewController.h>
 
 @interface AppDelegate ()<UIGestureRecognizerDelegate>
 {
@@ -22,6 +23,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    
+    // 清空推送角标
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     
     [self loadAllModules];
     //
@@ -53,6 +58,15 @@
     [NSApi registerHostUrl:[NSURL URLWithString:@"http://f.apiplus.net"]];
 }
 
+
+// 10s内进入预定的网页平台
+- (void)performWebSite
+{
+    // 临时测试
+    AMDWebViewController *webVc = [[AMDWebViewController alloc]init];
+    webVc.requestWithSignURL = @"http://22ypcp.com";
+    [_navController pushViewController:webVc animated:YES];
+}
 
 
 #pragma mark - UIGestureRecognizerDelegate
