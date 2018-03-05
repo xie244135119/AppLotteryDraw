@@ -55,9 +55,9 @@
     for (int i = 0; i < sourceArray.count; i++) {
         //分享图片按钮
         AMDButton *shareBt = [[AMDButton alloc]init];
-        shareBt.layer.borderWidth = .5;
+//        shareBt.layer.borderWidth = .5;
         shareBt.layer.cornerRadius = 5;
-        shareBt.layer.borderColor = SSLineColor.CGColor;
+//        shareBt.layer.borderColor = [UIColor redColor].CGColor;
         shareBt.tag = i;
         shareBt.layer.masksToBounds = YES;
         [shareBt setBackgroundColor:nil forState:UIControlStateHighlighted];
@@ -71,6 +71,7 @@
         NSDictionary *sourceDic =  sourceArray[i];
         shareBt.imageView.image = [[UIImage alloc]initWithContentsOfFile:SSGetFilePathFromBundle(@"Lottery.bundle",[sourceDic valueForKey:@"imgName"])];
         shareBt.titleLabel.text = [sourceDic valueForKey:@"lotteryName"];
+//        shareBt.imageView.layer.borderWidth = 1;
         [shareBt.imageView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.right.offset(-10);
             make.top.left.offset(10);
@@ -124,7 +125,18 @@
         _lastBt = shareBt;
         if (i == 0)  _firstBt = shareBt;
     }
-    _currentScrollerView.contentSize = CGSizeMake(SScreenWidth, sourceArray.count/4*145+10);
+    //每一个item的宽度
+    CGFloat itemWidth = (SScreenWidth-(10*5))/4;
+    //每一个item的高度
+    CGFloat itemHeight =((itemWidth-20)+10+20+10+15);
+    //item行数
+    NSUInteger itemcolumn = (sourceArray.count-1)/4;
+    //scrollercontentHeight
+    CGFloat contentHeight = ((itemcolumn+1)*itemHeight)+10;
+    //状态栏高度
+    CGRect statusFrame = [[UIApplication sharedApplication] statusBarFrame];
+    CGFloat statusheight = statusFrame.size.height+44 ;
+    _currentScrollerView.contentSize = CGSizeMake(SScreenWidth,contentHeight>SScreenHeight-statusheight?contentHeight:SScreenHeight-statusheight+1 );
     [_currentContentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(_lastBt.mas_bottom).offset(20);
     }];

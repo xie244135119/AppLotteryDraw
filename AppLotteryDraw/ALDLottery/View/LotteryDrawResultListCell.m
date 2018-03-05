@@ -239,8 +239,7 @@
 + (CGFloat)cellHeight:(NSInteger)sourceCount
 {
     //一个圆的宽度
-    NSUInteger column=sourceCount/10;
-    column = column == 0?1:column;
-    return (column*40+10)+60;
+    NSUInteger column=(sourceCount-1)/10;
+    return ((column+1)*40+10)+60;
 }
 @end
