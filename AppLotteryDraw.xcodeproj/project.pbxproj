@@ -20,6 +20,8 @@
 		72BB135720490F1100EE0AC3 /* LotteryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BB135420490F1100EE0AC3 /* LotteryModel.m */; };
 		72BB135820490F1100EE0AC3 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BB135620490F1100EE0AC3 /* Data.m */; };
 		72BB135B20490F1B00EE0AC3 /* LotteryDrawResultListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BB135920490F1B00EE0AC3 /* LotteryDrawResultListController.m */; };
+		CB184BF5204CDD9400AAA6E6 /* SSUMMobService+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1362047CC0200B618B2 /* SSUMMobService+Config.m */; };
+		CB184BFB204CE74400AAA6E6 /* GlobalVar.m in Sources */ = {isa = PBXBuildFile; fileRef = CB184BFA204CE74400AAA6E6 /* GlobalVar.m */; };
 		CB57DC202046BE2C00F2CFB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB57DC1F2046BE2C00F2CFB3 /* Assets.xcassets */; };
 		CB62D1552047CC2900B618B2 /* SSApnsPushService+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1302047CC0200B618B2 /* SSApnsPushService+Config.m */; };
 		CB62D1562047CC2E00B618B2 /* SSApnsPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = CB62D1322047CC0200B618B2 /* SSApnsPushService.m */; };
@@ -86,6 +88,9 @@
 		72BB135620490F1100EE0AC3 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
 		72BB135920490F1B00EE0AC3 /* LotteryDrawResultListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryDrawResultListController.m; sourceTree = "<group>"; };
 		72BB135A20490F1B00EE0AC3 /* LotteryDrawResultListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryDrawResultListController.h; sourceTree = "<group>"; };
+		CB184BF4204CDD2300AAA6E6 /* AppLotteryDraw.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppLotteryDraw.entitlements; sourceTree = "<group>"; };
+		CB184BF9204CE74400AAA6E6 /* GlobalVar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalVar.h; sourceTree = "<group>"; };
+		CB184BFA204CE74400AAA6E6 /* GlobalVar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalVar.m; sourceTree = "<group>"; };
 		CB57DC132046BE2C00F2CFB3 /* AppLotteryDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppLotteryDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB57DC162046BE2C00F2CFB3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -223,6 +228,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CB184BF02049936600AAA6E6 /* ALDWeb */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ALDWeb;
+			sourceTree = "<group>";
+		};
 		CB57DC0A2046BE2C00F2CFB3 = {
 			isa = PBXGroup;
 			children = (
@@ -244,8 +256,10 @@
 		CB57DC152046BE2C00F2CFB3 /* AppLotteryDraw */ = {
 			isa = PBXGroup;
 			children = (
+				CB184BF4204CDD2300AAA6E6 /* AppLotteryDraw.entitlements */,
 				CB57DC162046BE2C00F2CFB3 /* AppDelegate.h */,
 				CB57DC172046BE2C00F2CFB3 /* AppDelegate.m */,
+				CB184BF02049936600AAA6E6 /* ALDWeb */,
 				CB62D1912047F6EB00B618B2 /* ALDHome */,
 				CB62D12B2047CC0200B618B2 /* AMDBase */,
 				CB62D1592047D64000B618B2 /* ALDCountry */,
@@ -319,6 +333,8 @@
 				CB62D1452047CC0200B618B2 /* GlobalConfigFile.m */,
 				CB62D1462047CC0200B618B2 /* LoginInfoStorage.h */,
 				CB62D1472047CC0200B618B2 /* LoginInfoStorage.m */,
+				CB184BF9204CE74400AAA6E6 /* GlobalVar.h */,
+				CB184BFA204CE74400AAA6E6 /* GlobalVar.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -566,6 +582,11 @@
 					CB57DC122046BE2C00F2CFB3 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -674,6 +695,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB184BFB204CE74400AAA6E6 /* GlobalVar.m in Sources */,
 				CB7487FE204949B1005890C7 /* AppDelegate.m in Sources */,
 				CB7487FD204949AD005890C7 /* AppGuideController.m in Sources */,
 				CB7487FC204949A4005890C7 /* main.m in Sources */,
@@ -691,6 +713,7 @@
 				72A5A4EE20492075001F8C84 /* LotteryDrawResultListViewModel.m in Sources */,
 				7280622B204916AC0070C294 /* GlobalConfigFile.m in Sources */,
 				CB62D19E2047F73E00B618B2 /* AASMenuCell.m in Sources */,
+				CB184BF5204CDD9400AAA6E6 /* SSUMMobService+Config.m in Sources */,
 				CB62D19F2047FD5100B618B2 /* DDMenuController.m in Sources */,
 				CB7487FB20493051005890C7 /* AMDFeedBackViewController.m in Sources */,
 				72A5A4F22049241F001F8C84 /* ALDWaterfallLayout.m in Sources */,
@@ -819,11 +842,13 @@
 			baseConfigurationReference = 0142D65FD1C0B123102BC25C /* Pods-AppLotteryDraw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AppLotteryDraw/AppLotteryDraw.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3MZA829TE2;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = AppLotteryDraw/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.AppLotteryDraw;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunset.lottery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -834,11 +859,13 @@
 			baseConfigurationReference = 1D3B304FAB1AFD7CFA826C15 /* Pods-AppLotteryDraw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AppLotteryDraw/AppLotteryDraw.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3MZA829TE2;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = AppLotteryDraw/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.AppLotteryDraw;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunset.lottery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

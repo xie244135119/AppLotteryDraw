@@ -11,6 +11,12 @@ target 'AppLotteryDraw' do
     pod 'SSBaseLib', '1.0.4.11'
     pod 'SSBaseKit', '1.0.13.49'
     pod 'AMDNetworkService', '~>2.0'
+    
+    #静态库存储
+    pod 'SSUserDefaults'
+    
+    #友盟推送
+    pod 'SSBasePlugin'
   
       # 模块管理化工具
       pod 'SSModuleManager' , '1.3.7'

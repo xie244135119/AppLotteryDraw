@@ -16,7 +16,8 @@
 // AppKey
 - (NSString *)pushAppKey
 {
-    return @"";
+    // 彩票开奖平台
+    return @"4f2ef88c0741558123d5bccc";
 }
 
 // 测试AppKey

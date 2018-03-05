@@ -101,9 +101,10 @@ static NSString *const kModel = @"kModel";
 // 按钮事件
 - (void)clickLotteryInfoAction:(AMDButton *)sender
 {
-    
+    NSDictionary *dict = [sender getBindValueForKey:kModel];
     //
-    LotteryDrawResultListController *resault = [[LotteryDrawResultListController alloc]init];
+    LotteryDrawResultListController *resault = [[LotteryDrawResultListController alloc]initWithTitle:dict[@"lotteryName"]];
+    resault.lotteryCode = dict[@"lotteryCode"];
     [self.senderController.navigationController pushViewController:resault animated:YES];
 }
 

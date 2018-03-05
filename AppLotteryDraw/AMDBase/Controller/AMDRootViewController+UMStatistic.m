@@ -8,7 +8,7 @@
 
 #import "AMDRootViewController+UMStatistic.h"
 #import <objc/runtime.h>
-//#import <SSBasePlugin/SSUMMobService.h>
+#import <SSBasePlugin/SSUMMobService.h>
 //#import "LoginInfoStorage.h"
 
 @implementation AMDRootViewController (UMStatistic)
@@ -39,7 +39,7 @@
     self.navigationController.navigationBarHidden = YES;
     
     // uMeng统计
-//    [SSUMMobService beginLogPageView:[[self class] description]];
+    [SSUMMobService beginLogPageView:[[self class] description]];
     
     // 设置后退按钮颜色
     if (self.supportBack) {
@@ -51,7 +51,7 @@
 {
     [self amd_viewWillDisappear:animate];
     
-//    [SSUMMobService endLogPageView:[[self class] description]];
+    [SSUMMobService endLogPageView:[[self class] description]];
 }
 
 
