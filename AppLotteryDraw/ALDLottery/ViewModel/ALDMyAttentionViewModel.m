@@ -31,6 +31,7 @@
 -(void)prepareView{
     _senderController = (AMDRootViewController *)self.senderController;
     [self initContentView];
+    [self showhint];
 }
 
 -(void)initContentView{
@@ -105,10 +106,13 @@
 
 #pragma mark - 提示用户（只需要一次）
 - (void)showhint{
-    UIAlertController *alertCtr = [UIAlertController alertControllerWithTitle:@"我的关注提示文案还没给" message:nil preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
-    [alertCtr addAction:confirmAction];
-    [_senderController presentViewController:alertCtr animated:YES completion:nil];
+    if (![[NSUserDefaults standardUserDefaults] valueForKey:@"ifFirst"]) {
+        [[NSUserDefaults standardUserDefaults] setValue:@"YES" forKey:@"ifFirst"];
+        UIAlertController *alertCtr = [UIAlertController alertControllerWithTitle:@"我的关注提示文案还没给" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+        [alertCtr addAction:confirmAction];
+        [_senderController presentViewController:alertCtr animated:YES completion:nil];
+    }
 }
 
 @end
