@@ -31,8 +31,6 @@
 
 - (void)initContentView
 {
-//    _itemRedSourceArray = [[NSArray alloc]init];
-//    _infoBlueSourceArray = [[NSArray alloc]init];
     //开奖时间
     UILabel *timeLabel = [[UILabel alloc]init];
     _dateLabel = timeLabel;
@@ -66,15 +64,12 @@
     UIView *resultBackView = [[UIView alloc]init];
     _resultBackView = resultBackView;
     resultBackView.backgroundColor = SSColorWithRGB(230, 230, 230, 1);
-//    resultBackView.layer.borderWidth = .5;
-//    resultBackView.layer.borderColor = [UIColor grayColor].CGColor;
     [self addSubview:resultBackView];
     [resultBackView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(timeLabel);
         make.right.equalTo(@-10);
         make.top.equalTo(timeLabel.mas_bottom).offset(10);
     }];
-    
 }
 
 -(void)setLabelSpace:(UILabel*)label withValue:(NSString*)str withFont:(UIFont*)font {
@@ -93,13 +88,6 @@
     NSAttributedString *attributeStr = [[NSAttributedString alloc] initWithString:str attributes:dic];
     label.attributedText = attributeStr;
 }
-
-//-(void)setItemSourceArray:(NSArray<NSString *> *)itemSourceArray{
-//    _itemSourceArray = itemSourceArray;
-//    if (itemSourceArray.count>0) {
-//        [self initLotterDrawResultItem];
-//    }
-//}
 
 //搭建相应item按钮
 - (void)setItemCodel:(NSArray *)redCode blueCode:(NSArray *)blueCode{
@@ -158,14 +146,10 @@
                     make.left.equalTo(@10);
                 }else{
                     make.left.equalTo(_lastBt.mas_right).offset(10);
-//                    if (column == 5) {
-//                        make.right.equalTo(@-10);
-//                    }
                     NSString *sc = [NSString stringWithFormat:@"%ld",(long)column];
                     if ([sc rangeOfString:@"9"].location != NSNotFound) {
                         make.right.equalTo(@-10);
                     }
-                
                 }
             }
             
@@ -188,55 +172,6 @@
         make.bottom.equalTo(_currentItemBack.mas_bottom).offset(10);
     }];
 }
-
-//-(void)setInfoSourceArray:(NSArray<NSString *> *)infoSourceArray{
-//    _infoSourceArray = infoSourceArray;
-//    [self initInfoSourceView];
-//}
-//
-//
-//- (void)initInfoSourceView{
-//    [_currentSourceBack removeFromSuperview];
-//    UIView *sourceView = [[UIView alloc]init];
-//    _currentSourceBack = sourceView;
-//    [_resultBackView addSubview:sourceView];
-//    [sourceView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.bottom.left.right.offset(0);
-//        make.height.offset(100);
-//    }];
-//
-//    NSInteger width = (APPWidth-20)/4;
-//    __block UIView *lastView = nil;
-//    for (int i = 0; i < 4; i++) {
-//        UIView *backView = [[UIView alloc]init];
-//        backView.layer.borderWidth = 1;
-//        [sourceView addSubview:backView];
-//        [backView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.width.offset(width);
-//            make.height.offset(80);
-//            make.bottom.offset(0);
-//            if (i == 0) {
-//                make.left.equalTo(@0);
-//            }else{
-//                make.left.equalTo(lastView.mas_right);
-//            }
-//        }];
-//        lastView = backView;
-//
-//        UILabel *infoLabel = [[UILabel alloc]init];
-//        infoLabel.layer.borderWidth = 1;
-//        infoLabel.font = [UIFont systemFontOfSize:12];
-//        infoLabel.numberOfLines = 0;
-//        infoLabel.text = @"一等奖\n4,9999\n11人";
-//        [backView addSubview:infoLabel];
-//        [infoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.left.top.equalTo(@10);
-//            make.right.bottom.equalTo(@-10);
-//        }];
-//        [self setLabelSpace:infoLabel withValue:@"一等奖\n4,9999\n11人" withFont:[UIFont systemFontOfSize:12]];
-//    }
-//}
-
 
 + (CGFloat)cellHeight:(NSInteger)sourceCount
 {

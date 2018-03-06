@@ -23,9 +23,9 @@
 
 @interface LotteryDrawResultListViewModel()<UITableViewDelegate,UITableViewDataSource>
 {
-     UITableView *_currentTableView;
+     UITableView *_currentTableView; //当前表格
     AMDRootViewController *_senderController;
-    AMDButton *_currentRightBt ;//是否关注按钮
+    AMDButton *_currentRightBt ; //是否关注按钮
 }
 @end
 
@@ -93,14 +93,14 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
      Data *dataModel = _sourceArray[indexPath.row];
-//    cell.itemSourceArray = [dataModel openCode];
     [cell setItemCodel:dataModel.redArry blueCode:dataModel.blueArry];
     cell.dateLabel.text = [NSString stringWithFormat:@"第%@期",dataModel.expect] ;
     cell.timeLabel.text = [self timestampSwitchTime:dataModel.opentimestamp ];
-//    cell.infoSourceArray = @[@"dfafds"];
     return cell;
 }
 
+
+//时间戳转换
 -(NSString *)timestampSwitchTime:(NSInteger)timestamp{
     NSDateComponents *commponent = [SSDateTool toDateComponentsFromTimeStamp:@(timestamp)];
     NSArray *weektitles = @[@"星期日",@"星期一",@"星期二",@"星期三",@"星期四",@"星期五",@"星期六"];
@@ -108,6 +108,7 @@
 }
 
 
+//赋值数据源并且刷新列表
 - (void)setSourceArray:(NSArray *)sourceArray{
     _sourceArray = sourceArray;
     //回到主线程执行
@@ -116,10 +117,6 @@
     });
 }
 
-//-(void)setSourcesModel:(LotteryModel *)sourcesModel{
-//    _sourcesModel = sourcesModel;
-//    [_currentTableView reloadData];
-//}
 
 #pragma mark - 刷新和加载
 - (void)tableViewDidStartRefreshing:(id)collectionView
@@ -164,6 +161,7 @@
     [alert addAction:cancelAction];
     [_senderController presentViewController:alert animated:YES completion:nil];
 }
+
 
 //添加关注
 - (void)saveAttention{

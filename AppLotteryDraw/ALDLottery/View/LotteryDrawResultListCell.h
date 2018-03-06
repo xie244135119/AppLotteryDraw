@@ -15,11 +15,6 @@
 //期数
 @property (nonatomic, strong)UILabel *dateLabel;
 
-////数据源红号
-//@property (nonatomic, strong)NSArray<NSString*> *itemRedSourceArray;
-////蓝色号
-//@property (nonatomic, strong)NSArray<NSString*> *infoBlueSourceArray;
-
 //设置opencode
 - (void)setItemCodel:(NSArray *)redCode blueCode:(NSArray *)blueCode;
 

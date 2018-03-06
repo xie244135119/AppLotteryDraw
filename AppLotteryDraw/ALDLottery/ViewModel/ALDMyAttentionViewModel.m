@@ -21,6 +21,9 @@
     AMDRootViewController *_senderController;
     NSMutableArray *_sourceArray;
 }
+// 无视图显示
+@property(nonatomic, weak) AMDNoDataView *noDataView;
+
 @end
 
 @implementation ALDMyAttentionViewModel
@@ -43,6 +46,24 @@
     NSArray *model = [self lotteryModel];
     _sourceArray = model.mutableCopy;
     tableView.sourceData = _sourceArray;
+    self.noDataView.hidden = _sourceArray.count>0;
+}
+
+#pragma mark - 没数据的时候展示的视图
+- (AMDNoDataView *)noDataView
+{
+  
+    if (!_noDataView) {
+        CGRect statusFrame = [[UIApplication sharedApplication] statusBarFrame];
+        CGFloat statusheight = statusFrame.size.height+44 ;
+        AMDNoDataView *v = [[AMDNoDataView alloc] initWithFrame:CGRectMake(0, 0, SScreenWidth, SScreenHeight-statusheight)];
+        _noDataView = v;
+        _noDataView.titleLabel.text = NSLocalizedString(@"暂无关注", @"") ;
+        _noDataView.nodataImageView.image = [UIImage imageNamed:@"nodata_space.png"];
+        _noDataView.hidden = YES;
+        [_currentTableView.tableView addSubview:_noDataView];
+    }
+    return _noDataView;
 }
 
 #pragma mark - CustomTableViewDelegate
@@ -68,13 +89,12 @@
             //添加关注
             [_sourceArray addObject:infoDic];
         }
+        self.noDataView.hidden = _sourceArray.count>0;
         [_currentTableView.tableView reloadData];
     };
     [self.senderController.navigationController pushViewController:resault animated:YES];
     
 }
-
-
 
 #pragma mark - 数据处理
 - (NSArray *)lotteryModel{
