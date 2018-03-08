@@ -96,6 +96,8 @@
     vM.lotteryTypeDict = _lattoryDict;
     [vM prepareViewBySuper];
     _viewModel = vM;
+    //是否展示无网络视图
+    [vM noNetworkView:NO];
 }
 
 

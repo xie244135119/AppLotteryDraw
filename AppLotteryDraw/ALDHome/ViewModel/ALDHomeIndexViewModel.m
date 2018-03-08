@@ -46,8 +46,31 @@ static NSString *const kModel = @"kModel";
     NSString *lotteryplistpath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Lotterys.plist"];
     NSArray *arry = [[NSArray alloc]initWithContentsOfFile:lotteryplistpath];
     tableView.sourceData = arry;
+    tableView.tableView.tableHeaderView = [self hintView];
+    tableView.tableView.tableHeaderView.hidden = YES;
 }
 
+
+#pragma Mark - 不带任何其他控件的无网络展示视图
+- (UIView *)hintView{
+    //提示背景视图
+    UIView *hintBackView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SScreenWidth, 40)];
+    hintBackView.backgroundColor = SSColorWithRGB(252, 223, 224, 1);
+    
+    //图片
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 7.2, 25, 25)];
+    imageView.backgroundColor = [UIColor redColor];
+    imageView.layer.cornerRadius = 25/2;
+    imageView.layer.masksToBounds = YES;
+    [hintBackView addSubview:imageView];
+    
+    //提示内容
+    UILabel *contentLabel = [[UILabel alloc]initWithFrame:CGRectMake(50, 0, SScreenWidth-50, 40)];
+    contentLabel.text = @"当前网络不可用，请检查你的网络设置";
+    contentLabel.font = [UIFont systemFontOfSize:14];
+    [hintBackView addSubview:contentLabel];
+    return hintBackView;
+}
 
 
 #pragma mark - Table view data source and delegate
@@ -108,6 +131,30 @@ static NSString *const kModel = @"kModel";
     [self.senderController.navigationController pushViewController:resault animated:YES];
 }
 
+#pragma mark - 开始动画和结束动画
+- (void)noNetworkView:(BOOL)show{
+    if (show) {
+        [self showHintView];
+    }else{
+        [self hiddenHintView];
+    }
+}
+
+//没有搜索栏是直接把提示语添加到headerview控制偏移量实现动画效果
+- (void)showHintView{
+    _tableView.tableView.tableHeaderView.hidden = NO;
+    [UIView animateWithDuration:.5 animations:^{
+        [_tableView.tableView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+    }];
+}
+
+- (void)hiddenHintView{
+    [UIView animateWithDuration:.5 animations:^{
+        [_tableView.tableView setContentInset:UIEdgeInsetsMake(-40, 0, 0, 0)];
+    } completion:^(BOOL finished) {
+        _tableView.tableView.tableHeaderView.hidden = YES;
+    }];
+}
 
 
 @end

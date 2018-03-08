@@ -16,6 +16,8 @@
 // 彩种数据源
 @property(nonatomic, strong) NSDictionary *lotteryTypeDict;
 
+//是否展示无网络视图
+- (void)noNetworkView:(BOOL)show;
 
 @end
 
